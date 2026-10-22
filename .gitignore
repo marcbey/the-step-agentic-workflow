@@ -1,0 +1,7 @@
+*.HEIC
+*.heic
+*.sqlite3*
+.env*
+config/master.key
+*.pem
+.DS_Store

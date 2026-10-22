@@ -1,0 +1,418 @@
+{
+  "E01": {
+    "number": 1,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/1"
+  },
+  "E02": {
+    "number": 2,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/2"
+  },
+  "E03": {
+    "number": 3,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/3"
+  },
+  "E04": {
+    "number": 4,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/4"
+  },
+  "E05": {
+    "number": 5,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/5"
+  },
+  "E06": {
+    "number": 6,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/6"
+  },
+  "E07": {
+    "number": 7,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/7"
+  },
+  "E08": {
+    "number": 8,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/8"
+  },
+  "E09": {
+    "number": 9,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/9"
+  },
+  "E10": {
+    "number": 10,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/10"
+  },
+  "E11": {
+    "number": 11,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/11"
+  },
+  "E12": {
+    "number": 12,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/12"
+  },
+  "E13": {
+    "number": 13,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/13"
+  },
+  "BAS-01": {
+    "number": 14,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/14"
+  },
+  "BAS-02": {
+    "number": 15,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/15"
+  },
+  "BAS-03": {
+    "number": 16,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/16"
+  },
+  "BAS-04": {
+    "number": 17,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/17"
+  },
+  "BAS-05": {
+    "number": 18,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/18"
+  },
+  "BAS-06": {
+    "number": 19,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/19"
+  },
+  "CMS-01": {
+    "number": 20,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/20"
+  },
+  "ANG-01": {
+    "number": 21,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/21"
+  },
+  "ANG-02": {
+    "number": 22,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/22"
+  },
+  "ANG-07": {
+    "number": 23,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/23"
+  },
+  "GOV-01": {
+    "number": 24,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/24"
+  },
+  "BUC-01": {
+    "number": 25,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/25"
+  },
+  "BUC-02": {
+    "number": 26,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/26"
+  },
+  "ANG-03": {
+    "number": 27,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/27"
+  },
+  "CMS-03": {
+    "number": 28,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/28"
+  },
+  "CMS-02": {
+    "number": 29,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/29"
+  },
+  "EVT-01": {
+    "number": 30,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/30"
+  },
+  "WEB-01": {
+    "number": 31,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/31"
+  },
+  "WEB-02": {
+    "number": 32,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/32"
+  },
+  "WEB-03": {
+    "number": 33,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/33"
+  },
+  "WEB-07": {
+    "number": 34,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/34"
+  },
+  "WEB-04": {
+    "number": 35,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/35"
+  },
+  "WEB-05": {
+    "number": 36,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/36"
+  },
+  "WEB-06": {
+    "number": 37,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/37"
+  },
+  "WEB-08": {
+    "number": 38,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/38"
+  },
+  "WEB-09": {
+    "number": 39,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/39"
+  },
+  "WEB-10": {
+    "number": 40,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/40"
+  },
+  "CMS-04": {
+    "number": 41,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/41"
+  },
+  "CMS-05": {
+    "number": 42,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/42"
+  },
+  "CMS-06": {
+    "number": 43,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/43"
+  },
+  "ANG-04": {
+    "number": 44,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/44"
+  },
+  "KOM-01": {
+    "number": 45,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/45"
+  },
+  "ANG-05": {
+    "number": 46,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/46"
+  },
+  "ANG-06": {
+    "number": 47,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/47"
+  },
+  "ANG-08": {
+    "number": 48,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/48"
+  },
+  "BUC-03": {
+    "number": 49,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/49"
+  },
+  "BUC-04": {
+    "number": 50,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/50"
+  },
+  "BUC-05": {
+    "number": 51,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/51"
+  },
+  "BUC-06": {
+    "number": 52,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/52"
+  },
+  "BUC-07": {
+    "number": 53,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/53"
+  },
+  "BUC-08": {
+    "number": 54,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/54"
+  },
+  "BUC-09": {
+    "number": 55,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/55"
+  },
+  "BUC-10": {
+    "number": 56,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/56"
+  },
+  "EVT-02": {
+    "number": 57,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/57"
+  },
+  "KOM-02": {
+    "number": 58,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/58"
+  },
+  "GOV-02": {
+    "number": 59,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/59"
+  },
+  "FIN-01": {
+    "number": 60,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/60"
+  },
+  "FIN-02": {
+    "number": 61,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/61"
+  },
+  "MIT-01": {
+    "number": 62,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/62"
+  },
+  "MIT-02": {
+    "number": 63,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/63"
+  },
+  "FIN-03": {
+    "number": 64,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/64"
+  },
+  "MIT-06": {
+    "number": 65,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/65"
+  },
+  "FIN-04": {
+    "number": 66,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/66"
+  },
+  "FIN-05": {
+    "number": 67,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/67"
+  },
+  "MIT-03": {
+    "number": 68,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/68"
+  },
+  "MIT-04": {
+    "number": 69,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/69"
+  },
+  "MIT-05": {
+    "number": 70,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/70"
+  },
+  "MIT-07": {
+    "number": 71,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/71"
+  },
+  "MIT-08": {
+    "number": 72,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/72"
+  },
+  "OPS-01": {
+    "number": 73,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/73"
+  },
+  "OPS-02": {
+    "number": 74,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/74"
+  },
+  "OPS-03": {
+    "number": 75,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/75"
+  },
+  "OPS-04": {
+    "number": 76,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/76"
+  },
+  "OPS-05": {
+    "number": 77,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/77"
+  },
+  "OPS-06": {
+    "number": 78,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/78"
+  },
+  "OPS-07": {
+    "number": 79,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/79"
+  },
+  "SHP-01": {
+    "number": 80,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/80"
+  },
+  "SHP-02": {
+    "number": 81,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/81"
+  },
+  "SHP-03": {
+    "number": 82,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/82"
+  },
+  "SHP-04": {
+    "number": 83,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/83"
+  },
+  "SHP-05": {
+    "number": 84,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/84"
+  },
+  "SHP-06": {
+    "number": 85,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/85"
+  },
+  "SHP-07": {
+    "number": 86,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/86"
+  },
+  "SHP-08": {
+    "number": 87,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/87"
+  },
+  "GOV-03": {
+    "number": 88,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/88"
+  },
+  "GOV-04": {
+    "number": 89,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/89"
+  },
+  "GOV-05": {
+    "number": 90,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/90"
+  },
+  "GOV-06": {
+    "number": 91,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/91"
+  },
+  "REL-01": {
+    "number": 92,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/92"
+  },
+  "REL-02": {
+    "number": 93,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/93"
+  },
+  "REL-03": {
+    "number": 94,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/94"
+  },
+  "REL-04": {
+    "number": 95,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/95"
+  },
+  "EXT-01": {
+    "number": 96,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/96"
+  },
+  "EXT-02": {
+    "number": 97,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/97"
+  },
+  "EXT-03": {
+    "number": 98,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/98"
+  },
+  "EXT-04": {
+    "number": 99,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/99"
+  },
+  "EXT-05": {
+    "number": 100,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/100"
+  },
+  "EXT-06": {
+    "number": 101,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/101"
+  },
+  "EXT-07": {
+    "number": 102,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/102"
+  },
+  "EXT-08": {
+    "number": 103,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/103"
+  },
+  "EXT-09": {
+    "number": 104,
+    "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/104"
+  }
+}

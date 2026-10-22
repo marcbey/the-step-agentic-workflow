@@ -1,0 +1,3087 @@
+{
+  "epics": {
+    "E01": {
+      "title": "Technische Basis und Designsystem",
+      "release": "R0",
+      "area": "tech",
+      "github": {
+        "number": 1,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/1"
+      }
+    },
+    "E02": {
+      "title": "Öffentliche Website und Vereinsinformationen",
+      "release": "R1",
+      "area": "website",
+      "github": {
+        "number": 2,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/2"
+      }
+    },
+    "E03": {
+      "title": "Redaktion, Community und Medien",
+      "release": "R1",
+      "area": "content",
+      "github": {
+        "number": 3,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/3"
+      }
+    },
+    "E04": {
+      "title": "Skateangebote und Terminplanung",
+      "release": "R1",
+      "area": "angebote",
+      "github": {
+        "number": 4,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/4"
+      }
+    },
+    "E05": {
+      "title": "Buchung und Teilnehmerbetrieb",
+      "release": "R1",
+      "area": "buchung",
+      "github": {
+        "number": 5,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/5"
+      }
+    },
+    "E06": {
+      "title": "Veranstaltungen und Kommunikation",
+      "release": "R1",
+      "area": "events",
+      "github": {
+        "number": 6,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/6"
+      }
+    },
+    "E07": {
+      "title": "Rechnungen und Zahlungsverwaltung",
+      "release": "R2",
+      "area": "finanzen",
+      "github": {
+        "number": 7,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/7"
+      }
+    },
+    "E08": {
+      "title": "Mitgliedschaft, Familie und Selbstservice",
+      "release": "R2",
+      "area": "mitgliedschaft",
+      "github": {
+        "number": 8,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/8"
+      }
+    },
+    "E09": {
+      "title": "Trainer- und Mitarbeiterportal",
+      "release": "R2",
+      "area": "betrieb",
+      "github": {
+        "number": 9,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/9"
+      }
+    },
+    "E10": {
+      "title": "Shop, Bestellungen und Gutscheine",
+      "release": "R3",
+      "area": "shop",
+      "github": {
+        "number": 10,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/10"
+      }
+    },
+    "E11": {
+      "title": "Datenschutz, Sicherheit und Qualität",
+      "release": "R1",
+      "area": "qualitaet",
+      "github": {
+        "number": 11,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/11"
+      }
+    },
+    "E12": {
+      "title": "Migration, Betrieb und Abnahme",
+      "release": "R1",
+      "area": "release",
+      "github": {
+        "number": 12,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/12"
+      }
+    },
+    "E13": {
+      "title": "Optionale Erweiterungen",
+      "release": "R4",
+      "area": "option",
+      "github": {
+        "number": 13,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/13"
+      }
+    }
+  },
+  "releases": {
+    "R0": {
+      "title": "R0 – Fundament und verbindliche Entscheidungen",
+      "description": "Referenzabgleich, Rails-Basis, Berechtigungen, Design und lauffähige isolierte Staging-Umgebung. Kein öffentlicher Buchungsstart."
+    },
+    "R1": {
+      "title": "R1 – Website und Buchungsbetrieb",
+      "description": "Öffentliche Informationen, Redaktion, Angebote, sichere Gastbuchung, Kapazität, Warteliste und operativer Kursbetrieb. Zahlung zunächst vor Ort; kein Shop."
+    },
+    "R2": {
+      "title": "R2 – Verein und Team",
+      "description": "Mitgliedschaft, Familienportal, Rechnungsläufe, Mitarbeiterzeiten, Einsatzplanung und interne Zusammenarbeit."
+    },
+    "R3": {
+      "title": "R3 – Shop und Gutscheine",
+      "description": "Freigegebenes Handelsmodell, Produktkatalog, Mitgliederpreise, Checkout, Bestellabwicklung und Gutscheine."
+    },
+    "R4": {
+      "title": "R4 – Optionale Erweiterungen",
+      "description": "Separat priorisierbare Extras aus IMG_1143 und ergänzenden Medienanforderungen. Kein Blocker für R1–R3."
+    }
+  },
+  "stories": [
+    {
+      "id": "BAS-01",
+      "epic": "E01",
+      "title": "Referenzbestand und Wiederverwendungsstrategie abgleichen",
+      "role": "Entwicklung",
+      "benefit": "eine nachvollziehbare Ausgangsbasis ohne veraltete Prototypannahmen",
+      "criteria": [
+        "Referenzcommit b82d07f387b35836b273800b3d7fd169b6a1a145 und Liveabruf vom 22.10.2026 sind dokumentiert",
+        "Funktionen werden als übernehmen, anpassen oder neu entwickeln eingestuft",
+        "Code und Liveinhalt haben bei Widersprüchen Vorrang vor älteren README-Passagen",
+        "Buchung, Zahlungsstatus und Community werden anhand realer Modelle und Tests inventarisiert",
+        "Übernahme enthält weder Zugangsdaten noch Datenbanken oder echte Teilnehmerdaten",
+        "Ein Architekturentscheid vergleicht selektive Codeübernahme, vollständigen Fork und Neubau und begründet die Auswahl"
+      ],
+      "depends_on": [],
+      "points": 3,
+      "priority": "P0",
+      "release": "R0",
+      "source": [
+        "T01",
+        "W01"
+      ],
+      "test": "Inventar gegen Gemfile.lock, Routen und mindestens Buchungs-/User-/Community-Modelle prüfen; veraltete README-Aussagen sichtbar kennzeichnen.",
+      "decision": "D01",
+      "github": {
+        "number": 14,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/14"
+      }
+    },
+    {
+      "id": "BAS-02",
+      "epic": "E01",
+      "title": "Rails-Anwendung und reproduzierbare CI vorbereiten",
+      "role": "Entwicklung",
+      "benefit": "einen reproduzierbaren Entwicklungs- und Prüfablauf",
+      "criteria": [
+        "Ruby 4.0.6 ist in mise und .ruby-version identisch festgelegt",
+        "Rails 8.1.3.1 und sqlite3 2.9.6 werden über ein geprüftes Lockfile reproduziert",
+        "Frischer Checkout lässt sich mit mise und db:prepare ohne Produktivdaten starten",
+        "CI führt Minitest, Systemtests, RuboCop, Brakeman und Bundler Audit aus",
+        "Secrets-, Datenbank- und private-Schlüssel-Dateien werden vom Commit ausgeschlossen und geprüft",
+        "Fehlgeschlagene Pflichtprüfungen blockieren die technische Releasefreigabe"
+      ],
+      "depends_on": [
+        "BAS-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R0",
+      "source": [
+        "T01"
+      ],
+      "test": "Frischen Checkout in CI vorbereiten; absichtlich fehlendes Secret und fehlerhaften Test als Negativfälle prüfen.",
+      "decision": "",
+      "github": {
+        "number": 15,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/15"
+      }
+    },
+    {
+      "id": "BAS-03",
+      "epic": "E01",
+      "title": "Konten, Rollen und Zuständigkeiten trennen",
+      "role": "Administration",
+      "benefit": "Zugriffe passend zur jeweiligen Aufgabe vergeben zu können",
+      "criteria": [
+        "Ein User verwaltet Zugang und optionales öffentliches Teamprofil",
+        "admin, editor und viewer bleiben Verwaltungsrollen; Coach ist eine zusätzliche Zuständigkeit",
+        "Mitglied, Erziehungsberechtigte und Mitarbeitende erhalten getrennte fachliche Berechtigungen",
+        "Anmeldung, Einladungsannahme, Passwortzurücksetzung und Logout haben ablaufende sichere Tokens",
+        "Deaktivierung und Zuständigkeitsentzug wirken beim nächsten Request",
+        "Der letzte aktive Admin kann weder gelöscht noch deaktiviert oder herabgestuft werden"
+      ],
+      "depends_on": [
+        "BAS-02"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R0",
+      "source": [
+        "T01",
+        "F01",
+        "F04"
+      ],
+      "test": "Rollenmatrix einschließlich direkter URL-/ID-Manipulation und paralleler Änderungen am letzten Admin testen.",
+      "decision": "",
+      "github": {
+        "number": 16,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/16"
+      }
+    },
+    {
+      "id": "BAS-04",
+      "epic": "E01",
+      "title": "Isoliertes Staging und wiederherstellbares Deployment planen",
+      "role": "Betrieb",
+      "benefit": "neue Releases ohne Eingriff in das bestehende System prüfen zu können",
+      "criteria": [
+        "Docker, GHCR, Kamal 2.12 und Hetzner folgen den Referenzkonventionen",
+        "Neue Anwendung nutzt eigene Domain, Service-, Volume- und Datenbanknamen",
+        "Webprozess, Solid Queue, Scheduler und Solid Cache starten mit Healthchecks",
+        "SQLite- und Active-Storage-Daten bleiben über Deployments persistent",
+        "Verschlüsselte konsistente Backups und Rückkehr auf den letzten freigegebenen Stand sind beschrieben",
+        "Ein Restore in isoliertem Staging ist mit gesperrtem Mailversand erfolgreich nachgewiesen"
+      ],
+      "depends_on": [
+        "BAS-02"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R0",
+      "source": [
+        "T01"
+      ],
+      "test": "Container ersetzen, Dateien und Datensätze wiederfinden; Restore und Rollback mit synthetischen Daten durchführen.",
+      "decision": "D02",
+      "github": {
+        "number": 17,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/17"
+      }
+    },
+    {
+      "id": "BAS-05",
+      "epic": "E01",
+      "title": "Bestehendes TheStep-Design als Komponentenbasis übernehmen",
+      "role": "Besucherin",
+      "benefit": "TheStep im neuen Angebot wiederzuerkennen",
+      "criteria": [
+        "Farbtokens #F5F0E6, #171717, #FFE500, #E5153D, #29B957 und #5421A6 sind zentral definiert",
+        "Barlow Condensed, Bungee und Familjen Grotesk werden lokal mit Lizenznachweis ausgeliefert",
+        "Schwarze Konturen, harte Schatten, gerade Karten und große Typografie entsprechen der Livevorlage",
+        "Logo, Vereinsabsender und Hero mit SKATEBOARDING AGAINST LANGEWEILE sind anhand der aktuellen Website referenziert",
+        "Buttons, Formulare, Fehlermeldungen, Statusanzeigen und Kalender besitzen gemeinsame Varianten",
+        "Referenzansichten bei 375, 768 und 1440 Pixeln werden fachlich abgenommen"
+      ],
+      "depends_on": [
+        "BAS-01",
+        "BAS-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R0",
+      "source": [
+        "W01",
+        "T01"
+      ],
+      "test": "Komponentenansicht mit Fokus, Fehler, Ladezustand und langen deutschen Bezeichnungen visuell vergleichen.",
+      "decision": "",
+      "github": {
+        "number": 18,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/18"
+      }
+    },
+    {
+      "id": "BAS-06",
+      "epic": "E01",
+      "title": "Navigation und zugängliche Grundlayouts erstellen",
+      "role": "Besucherin",
+      "benefit": "Angebote und Hilfen auf Mobilgerät und Desktop schnell zu erreichen",
+      "criteria": [
+        "Sieben Hauptbereiche Startseite, Skateangebote, Events, Verein, Shop, News und Mein TheStep sind vorgesehen",
+        "Noch nicht freigegebene Bereiche erscheinen erst mit funktionsfähigem Ziel",
+        "Kontakt, Kinderschutz, Impressum, Datenschutz und Einstellungen sind dauerhaft erreichbar",
+        "Mobile Navigation ist per Tastatur bedienbar und gibt Fokus nach dem Schließen zurück",
+        "320 Pixel Breite und 200 Prozent Zoom erzeugen keinen horizontalen Inhaltsverlust",
+        "Skip-Link, Landmarken und verständliche Seitentitel sind in allen Layouts vorhanden"
+      ],
+      "depends_on": [
+        "BAS-05"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R0",
+      "source": [
+        "F05",
+        "F04",
+        "W01"
+      ],
+      "test": "Tastaturpfad von Navigation zur Buchung sowie Browser-Zoom und schmale Darstellung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 19,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/19"
+      }
+    },
+    {
+      "id": "WEB-01",
+      "epic": "E02",
+      "title": "Startseite mit aktuellen Einstiegen gestalten",
+      "role": "Interessentin",
+      "benefit": "passende Angebote und Vereinsinformationen unmittelbar zu finden",
+      "criteria": [
+        "Hero übernimmt die Livegestaltung mit lesbarer Textalternative und statischem Fallback",
+        "Primäre Aktion führt zu tatsächlich buchbaren Skateangeboten",
+        "Nächste Trainings und Camps berücksichtigen Veröffentlichungsstatus und aktuelle Termine",
+        "News und Events verwenden ausschließlich freigegebene Inhalte",
+        "Vereinskurzvorstellung und Mitgliedschaftseinstieg sind erreichbar",
+        "Test Seite, Foo, Beispielereignisse und redaktionelle Platzhalter werden nicht veröffentlicht"
+      ],
+      "depends_on": [
+        "BAS-06",
+        "ANG-03",
+        "CMS-02",
+        "EVT-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03",
+        "F05",
+        "W01"
+      ],
+      "test": "Leere Daten, vergangene Termine und deaktiviertes Video ergeben verständliche Ansichten ohne Musterinhalte.",
+      "decision": "",
+      "github": {
+        "number": 31,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/31"
+      }
+    },
+    {
+      "id": "WEB-02",
+      "epic": "E02",
+      "title": "Verein, Geschichte und Abgrenzung zum Stuttpark darstellen",
+      "role": "Elternteil",
+      "benefit": "Auftrag und Verantwortlichkeiten des Vereins zu verstehen",
+      "criteria": [
+        "Vereinsauftrag, Geschichte, Mission und Werte übernehmen die freigegebenen Referenzinhalte",
+        "TheStep erscheint als Marke des Stuttgarter Skateboard e.V.",
+        "Stuttpark wird als Sportstätte und Infrastrukturpartner klar abgegrenzt",
+        "Kurse, Camps, AGs, Workshops, Geburtstage, Firmenevents und Wettkämpfe sind zu passenden Angeboten verlinkt",
+        "Vorstand, Mitgliedschaft, Satzung und Kinderschutz haben erkennbare Einstiege",
+        "Redaktionelle Änderungen besitzen Vorschau, verantwortliche Freigabe und Änderungsdatum"
+      ],
+      "depends_on": [
+        "BAS-06",
+        "CMS-01"
+      ],
+      "points": 3,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03",
+        "W02"
+      ],
+      "test": "Inhaltsabgleich mit Referenzseite einschließlich Gegenüberstellung Verein/Hallenbetrieb durchführen.",
+      "decision": "",
+      "github": {
+        "number": 32,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/32"
+      }
+    },
+    {
+      "id": "WEB-03",
+      "epic": "E02",
+      "title": "Team und Trainerprofile veröffentlichen",
+      "role": "Elternteil",
+      "benefit": "die Menschen und Qualifikationen hinter den Angeboten kennenzulernen",
+      "criteria": [
+        "Aktive freigegebene Profile zeigen Name, Rolle, Steckbrief und freigegebene Qualifikationen",
+        "Interne Zuständigkeiten und private Kontaktdaten werden nicht automatisch öffentlich",
+        "Profilbild benötigt Alternativtext und dokumentierte Nutzungsfreigabe",
+        "Öffentliches Profil erzeugt keine zusätzlichen Verwaltungsrechte",
+        "Deaktivierung entfernt die Person aus öffentlichen Listen und Vorschauen",
+        "Fehlendes Foto und lange Namen bleiben sauber darstellbar"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "CMS-03"
+      ],
+      "points": 3,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03",
+        "T01"
+      ],
+      "test": "Unveröffentlichtes Profil über Direktlink und Bild-URL prüfen; deaktivierten User aus Listen entfernen.",
+      "decision": "",
+      "github": {
+        "number": 33,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/33"
+      }
+    },
+    {
+      "id": "WEB-04",
+      "epic": "E02",
+      "title": "Kinderschutzseite und verlässliche Kontaktwege bereitstellen",
+      "role": "Kind oder Elternteil",
+      "benefit": "das Schutzkonzept und freigegebene Hilfewege leicht zu finden",
+      "criteria": [
+        "Vollständiges Konzept wird als strukturierter HTML-Inhalt und zugänglicher Download angeboten",
+        "Interne und externe Kinderschutzkontakte werden vom Verein fachlich bestätigt",
+        "Fehlende oder ungeprüfte Kontakte blockieren das öffentliche Release",
+        "Konzeptversion, Zuständigkeit und nächster Prüftermin sind nachvollziehbar",
+        "Allgemeines Kontaktformular und öffentliche Kommentare werden nicht als vertrauliches Fallmanagement ausgegeben",
+        "Kinderschutz ist von Angebotsdetail und Footer direkt erreichbar"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "WEB-07"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F02",
+        "W03",
+        "T01"
+      ],
+      "test": "Strikter Inhaltscheck muss bei fehlendem Kinderschutzkontakt scheitern und bei vollständig freigegebenen Angaben bestehen.",
+      "decision": "D03",
+      "github": {
+        "number": 35,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/35"
+      }
+    },
+    {
+      "id": "WEB-05",
+      "epic": "E02",
+      "title": "Kontakt, Standorte und Anfahrt bereitstellen",
+      "role": "Interessentin",
+      "benefit": "den richtigen Ansprechpartner und Trainingsort zu erreichen",
+      "criteria": [
+        "Vereinsanschrift und Trainingsort werden getrennt bezeichnet",
+        "E-Mail, Telefon und offizielle Website werden aus geprüften zentralen Angaben ausgegeben",
+        "Bürozeiten werden nur angezeigt, wenn der Verein sie bestätigt hat",
+        "Kontaktformular bietet Anliegenwahl, Pflichtfeldprüfung und verständliche Versandbestätigung",
+        "Rate Limit und Spamabwehr verhindern automatisierte Serienanfragen ohne unzugängliches Pflicht-Captcha",
+        "Anfahrt ist ohne Drittanbieterkarte nutzbar; Google Maps lädt erst nach eigener Freigabe"
+      ],
+      "depends_on": [
+        "BAS-06",
+        "GOV-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04",
+        "W04"
+      ],
+      "test": "Spam, Mailausfall, leere Bürozeiten und Ablehnung externer Inhalte prüfen; erneutes Absenden erzeugt keine Duplikate.",
+      "decision": "D04",
+      "github": {
+        "number": 36,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/36"
+      }
+    },
+    {
+      "id": "WEB-06",
+      "epic": "E02",
+      "title": "Service, Sicherheit und häufige Fragen pflegen",
+      "role": "Elternteil",
+      "benefit": "Ausrüstung und Ablauf vor dem ersten Besuch zu kennen",
+      "criteria": [
+        "FAQ behandelt Alter, Level, Preise, Termine und Mitbringliste",
+        "Wetter- und Regenregelung beschreibt Entscheidung, Kontaktweg und Ersatztermin",
+        "Halleninformationen unterscheiden Vereinsangebot von Hallenöffnungszeiten und Eintritt",
+        "Leihmaterial und Preise sind mit der aktuellen Angebotskonfiguration verknüpft",
+        "Schutzausrüstung und Sicherheitshinweise sind auf relevanten Buchungswegen erreichbar",
+        "FAQ kann ohne JavaScript gelesen und über direkte Abschnittslinks geteilt werden"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "CMS-01"
+      ],
+      "points": 3,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F02",
+        "F03"
+      ],
+      "test": "Preisänderung darf keine abweichenden FAQ-Beträge erzeugen; Ankerlinks und No-JavaScript-Ansicht prüfen.",
+      "decision": "",
+      "github": {
+        "number": 37,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/37"
+      }
+    },
+    {
+      "id": "WEB-07",
+      "epic": "E02",
+      "title": "Versionierte öffentliche Downloads bereitstellen",
+      "role": "Mitglied",
+      "benefit": "gültige Vereinsunterlagen einfach herunterzuladen",
+      "criteria": [
+        "Satzung, Beitragsordnung, Datenschutz, Einverständniserklärungen, Fördermitgliedsantrag und Flyer sind katalogisiert",
+        "Jeder Download zeigt Titel, Dateityp, Größe, Version und Gültigkeit",
+        "Nicht freigegebene und abgelaufene Fassungen erscheinen nicht als aktuell",
+        "Dateityp und Dateigröße werden geprüft; Uploads enthalten keine unnötigen Unterschriften oder persönlichen Daten",
+        "Wichtige PDF-Inhalte haben eine zugängliche HTML-Zusammenfassung",
+        "Neue Versionen ersetzen den aktuellen Verweis ohne historische Belege ungültig zu machen"
+      ],
+      "depends_on": [
+        "CMS-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F02",
+        "F04"
+      ],
+      "test": "Berechtigung privater Dokumente, fehlerhafte PDF-Uploads, Versionswechsel und defekte Links prüfen.",
+      "decision": "D05",
+      "github": {
+        "number": 34,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/34"
+      }
+    },
+    {
+      "id": "WEB-08",
+      "epic": "E02",
+      "title": "Sponsoren und Kooperationen sichtbar machen",
+      "role": "potenzieller Sponsor",
+      "benefit": "bestehende Zusammenarbeit und Unterstützungsmöglichkeiten zu verstehen",
+      "criteria": [
+        "Sponsoren und Kooperationspartner haben getrennte Kategorien",
+        "Freigegebene Logos, Beschreibungen und Links sind redaktionell pflegbar",
+        "Aktive Laufzeit steuert die öffentliche Sichtbarkeit",
+        "Sponsor werden führt zu einem zuordenbaren Kontaktanliegen",
+        "Externe Links sind klar benannt und öffnen keine unkontrollierten Skripte",
+        "Logorechte und verantwortliche Freigabe sind vor Veröffentlichung dokumentiert"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "WEB-05"
+      ],
+      "points": 3,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F02"
+      ],
+      "test": "Abgelaufener Sponsor, fehlendes Logo und ungültige externe URL ergeben sichere Zustände.",
+      "decision": "",
+      "github": {
+        "number": 38,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/38"
+      }
+    },
+    {
+      "id": "WEB-09",
+      "epic": "E02",
+      "title": "Ehrenamt, Jobs, Praktikum und FSJ vorstellen",
+      "role": "Interessentin",
+      "benefit": "passende Möglichkeiten zur Mitarbeit zu finden",
+      "criteria": [
+        "Ehrenamt, Jobs, Praktikum und FSJ sind als getrennte Möglichkeiten beschreibbar",
+        "Nur vom Verein bestätigte Stellen werden als offen bezeichnet",
+        "Jedes Angebot zeigt Aufgaben, Voraussetzungen und Kontaktweg",
+        "Abgelaufene Stellen verlieren ihre Bewerbungsaktion",
+        "Bewerbungen werden an einen definierten geschützten Kanal verwiesen",
+        "Für ein leeres Stellenangebot erscheint eine ehrliche Initiativkontakt-Option"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "WEB-05"
+      ],
+      "points": 3,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F03"
+      ],
+      "test": "Offene, geschlossene und fehlende Stellen samt direkter URL prüfen; keine Bewerbung im öffentlichen Newsbereich speichern.",
+      "decision": "",
+      "github": {
+        "number": 39,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/39"
+      }
+    },
+    {
+      "id": "WEB-10",
+      "epic": "E02",
+      "title": "Öffentliche Suche und Suchmaschinenbasis anbieten",
+      "role": "Besucherin",
+      "benefit": "veröffentlichte Angebote und Informationen zu finden",
+      "criteria": [
+        "Suche umfasst freigegebene Seiten, Angebote, News und Events",
+        "Private Profile, Buchungen und interne Dokumente werden nie indexiert",
+        "Treffer zeigen Titel, Bereich und verständlichen Ausschnitt",
+        "Leere Suche, Tippfehler und keine Treffer haben hilfreiche Rückwege",
+        "Sitemap, Canonical-Links, Metadaten und Redirects erhalten öffentliche Auffindbarkeit",
+        "Staging, Vorschauen und persönliche Bereiche sind für Suchmaschinen gesperrt"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "ANG-03",
+        "EVT-01"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F05"
+      ],
+      "test": "Suchbegriff mit HTML, sehr langer Eingabe und internem Datensatz darf weder XSS noch Datenabfluss erzeugen.",
+      "decision": "",
+      "github": {
+        "number": 40,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/40"
+      }
+    },
+    {
+      "id": "CMS-01",
+      "epic": "E03",
+      "title": "Redaktionelle Seiten mit Vorschau und Freigabe verwalten",
+      "role": "Redaktion",
+      "benefit": "Vereinsinhalte ohne Codeänderung aktuell zu halten",
+      "criteria": [
+        "Action Text und Lexxy unterstützen strukturierte Texte innerhalb des Rails-Systems",
+        "Entwurf, Vorschau, Veröffentlichung und Archivierung sind getrennte Zustände",
+        "Nur berechtigte Admins und Editors ändern öffentliche Inhalte",
+        "Slugs bleiben eindeutig; Änderungen erhalten kontrollierte Weiterleitungen",
+        "Systemseiten für Recht und Kontakt bleiben trotz redaktioneller Bearbeitung dauerhaft erreichbar",
+        "Revisionsstand, Bearbeiter und Veröffentlichungszeitpunkt werden nachvollziehbar gespeichert"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "BAS-05"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01",
+        "F01"
+      ],
+      "test": "Unveröffentlichte Vorschau ohne Berechtigung, konkurrierende Bearbeitung und Script-Eingaben prüfen.",
+      "decision": "",
+      "github": {
+        "number": 20,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/20"
+      }
+    },
+    {
+      "id": "CMS-02",
+      "epic": "E03",
+      "title": "News und Vereinsberichte veröffentlichen",
+      "role": "Redaktion",
+      "benefit": "aktuelle Vereinsnachrichten und Rückblicke zu teilen",
+      "criteria": [
+        "News zeigen Titel, Datum, Kurztext und strukturierten Inhalt",
+        "Entwurf, Veröffentlichungstermin und Archiv sind pflegbar",
+        "Startseite verwendet ausgewählte veröffentlichte Beiträge",
+        "Kategorien unterstützen Vereinsleben, Kurse und Veranstaltungen",
+        "Bilder und Galerieverweise verwenden zentrale Medienrechte",
+        "Fehlende Beiträge führen zu einem verständlichen leeren Zustand"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "CMS-03"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F02",
+        "F03"
+      ],
+      "test": "Geplanter Beitrag darf vor Termin nicht öffentlich werden; Archivierung muss Startseite und Suche aktualisieren.",
+      "decision": "",
+      "github": {
+        "number": 29,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/29"
+      }
+    },
+    {
+      "id": "CMS-03",
+      "epic": "E03",
+      "title": "Galerien mit Medienrechten und Widerruf verwalten",
+      "role": "Redaktion",
+      "benefit": "Bilder verantwortungsvoll und in guter Qualität zu veröffentlichen",
+      "criteria": [
+        "JPEG, PNG und WebP werden bis 10 MB und 25 Megapixel akzeptiert",
+        "Bildfokus und Zoom erzeugen gemeinsame 4:3-Vorschauen",
+        "Alternativtext, Credit und Rechtebeleg sind Veröffentlichungsvoraussetzung",
+        "Aufnahmen Minderjähriger werden mit dokumentierter Freigabe und Nutzungsumfang verknüpft",
+        "Widerruf sperrt alle betroffenen öffentlichen Varianten und startet Cache-/Storage-Bereinigung",
+        "Nicht zugeordnete Uploads werden erst nach mindestens 24 Stunden kontrolliert bereinigt"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "BAS-04"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F02",
+        "T01"
+      ],
+      "test": "Zu große und falsch deklarierte Datei ablehnen; Widerruf in News, Team und Galerie inklusive Direktabruf prüfen.",
+      "decision": "",
+      "github": {
+        "number": 28,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/28"
+      }
+    },
+    {
+      "id": "CMS-04",
+      "epic": "E03",
+      "title": "Videos und externe Medien mit Zustimmung anzeigen",
+      "role": "Besucherin",
+      "benefit": "Videos mit selbst gewählten Datenschutzeinstellungen anzusehen",
+      "criteria": [
+        "Eigene MP4-/WebM-Dateien und validierte YouTube-/Vimeo-Links sind unterstützt",
+        "Externe Anbieter erhalten vor aktiver Zustimmung keine Requests",
+        "Ablehnung lässt Seite und Buchungswege vollständig nutzbar",
+        "Zustimmung kann über Footer und Einbettungsplatzhalter geändert werden",
+        "Widerruf entfernt externe Player und verhindert neue Anbieterrequests",
+        "Bedeutungstragende Videos erhalten geplante Untertitel oder Textalternative vor inhaltlicher Freigabe"
+      ],
+      "depends_on": [
+        "CMS-03",
+        "GOV-01"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F02",
+        "W05",
+        "T01"
+      ],
+      "test": "Netzwerkrequests vor Zustimmung, nach Ablehnung und nach Widerruf prüfen; bösartige Embed-URLs ablehnen.",
+      "decision": "",
+      "github": {
+        "number": 41,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/41"
+      }
+    },
+    {
+      "id": "CMS-05",
+      "epic": "E03",
+      "title": "Pressebereich und freigegebene Materialien bereitstellen",
+      "role": "Pressevertreterin",
+      "benefit": "verlässliche Vereinsinformationen und verwendbare Medien zu erhalten",
+      "criteria": [
+        "Pressekontakt und Vereinskurzporträt sind zentral erreichbar",
+        "Presseberichte und Links werden mit Datum und Quelle gepflegt",
+        "Pressefotos zeigen Credit und erlaubte Verwendungszwecke",
+        "Downloadpakete enthalten ausschließlich freigegebene Dateien",
+        "Entzug einer Freigabe entfernt betroffene Downloads",
+        "Presseanfragen werden dem passenden Kontaktkanal zugeordnet"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "CMS-03",
+        "WEB-05"
+      ],
+      "points": 3,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F02"
+      ],
+      "test": "Gesperrtes Bild darf nicht im Downloadpaket verbleiben; tote externe Presselinks werden redaktionell erkennbar.",
+      "decision": "",
+      "github": {
+        "number": 42,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/42"
+      }
+    },
+    {
+      "id": "CMS-06",
+      "epic": "E03",
+      "title": "Instagram-Inhalte als optionale Ergänzung integrieren",
+      "role": "Communitymitglied",
+      "benefit": "aktuelle Social-Media-Beiträge auf Wunsch zu sehen",
+      "criteria": [
+        "Standardansicht bietet einen einfachen Link zum offiziellen Account",
+        "Ein Feed wird erst nach dokumentierter Anbieterentscheidung aktiviert",
+        "Ohne eigene Zustimmung werden keine Social-Requests ausgelöst",
+        "API-Ausfall und abgelaufene Anbieterberechtigung lassen einen nutzbaren Fallback",
+        "Es werden nur freigegebene Vereinsinhalte angezeigt",
+        "Kontozugänge und API-Secrets liegen ausschließlich im Secret Store"
+      ],
+      "depends_on": [
+        "CMS-04"
+      ],
+      "points": 5,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F02"
+      ],
+      "test": "Feed ohne Zustimmung, bei API-Ausfall und nach Rechtewiderruf prüfen.",
+      "decision": "D06",
+      "github": {
+        "number": 43,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/43"
+      }
+    },
+    {
+      "id": "ANG-01",
+      "epic": "E04",
+      "title": "Angebotsarten und veröffentlichbare Angebotsdaten modellieren",
+      "role": "Kursplanung",
+      "benefit": "Kurse, Schnuppern, Camps und Workshops einheitlich zu beschreiben",
+      "criteria": [
+        "Angebotstyp, Alter, Level, Ort, Preisgruppen und Buchungsregeln sind typisierte Daten",
+        "Regelmäßiger Kurs, Einzelkurs und mehrtägiges Angebot sind unterscheidbar",
+        "Entwurf, veröffentlicht, abgesagt und archiviert haben klare Wirkung",
+        "Kapazität und Buchungsschluss werden serverseitig validiert",
+        "Nicht buchbare Angebote zeigen einen erklärten Kontakt- oder Anmeldeweg",
+        "Es werden keine unbelegten Preise, Altersgrenzen oder Kursbestände als Fakten angelegt"
+      ],
+      "depends_on": [
+        "BAS-02",
+        "CMS-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03",
+        "T01"
+      ],
+      "test": "Unvollständiges Angebot kann nicht veröffentlicht werden; vergangener Termin und negative Kapazität werden abgewiesen.",
+      "decision": "D07",
+      "github": {
+        "number": 21,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/21"
+      }
+    },
+    {
+      "id": "ANG-02",
+      "epic": "E04",
+      "title": "Serien, Ausnahmen und Ferien im Kurskalender planen",
+      "role": "Kursplanung",
+      "benefit": "regelmäßige Termine ohne versehentliche Ferienbuchung zu organisieren",
+      "criteria": [
+        "Serien erzeugen nachvollziehbare einzelne Termine in Europe/Berlin",
+        "Ferien und Feiertage verwenden versionierte amtliche BW-Quelldaten",
+        "Ausnahme, Ersatztermin und Absage überschreiben nur den gewählten Termin",
+        "Änderungen einer Serie zeigen vorab ihre Wirkung auf bestehende Buchungen",
+        "Doppelte Termine werden bei erneutem Generierungslauf verhindert",
+        "Vergangene Termine können nicht stillschweigend umgeplant werden"
+      ],
+      "depends_on": [
+        "ANG-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F03",
+        "T01"
+      ],
+      "test": "Sommer-/Winterzeitwechsel, Schulferien, Serienänderung und doppelten Generierungslauf testen.",
+      "decision": "",
+      "github": {
+        "number": 22,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/22"
+      }
+    },
+    {
+      "id": "ANG-03",
+      "epic": "E04",
+      "title": "Angebotsübersicht und Angebotsdetails bereitstellen",
+      "role": "buchende Person",
+      "benefit": "ein passendes Angebot nach Alter, Level und Termin zu finden",
+      "criteria": [
+        "Filter unterstützen Angebotsart, Altersgruppe, Level und Zeitraum",
+        "Detailseite zeigt Ort, alle Termine, Kosten, Leihoptionen und Mitbringliste",
+        "Freie Plätze berücksichtigen bestätigte Buchungen und aktive Reservierungen",
+        "Buchungsschluss und Absagezustand werden mit Text erklärt",
+        "Gefilterte Ansichten sind verlinkbar und behalten Auswahl bei der Rückkehr",
+        "Ohne JavaScript bleiben Informationen und primärer Buchungsweg nutzbar"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "ANG-02",
+        "BUC-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F03",
+        "F05"
+      ],
+      "test": "Filter ohne Treffer, gerade ausgebuchtes Angebot und mehrtägigen Camptermin prüfen.",
+      "decision": "",
+      "github": {
+        "number": 27,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/27"
+      }
+    },
+    {
+      "id": "ANG-04",
+      "epic": "E04",
+      "title": "Camps und mehrtägige Workshops als Buchungseinheit führen",
+      "role": "Elternteil",
+      "benefit": "ein Camp mit allen Tagen verlässlich zu buchen",
+      "criteria": [
+        "Campdetail zeigt sämtliche Tageszeiten, Orte und Leistungsbestandteile",
+        "Eine Campbuchung belegt genau einen Platz in der gesamten definierten Einheit",
+        "Anwesenheit bleibt je Tag getrennt erfassbar",
+        "Teilnahme an einzelnen Tagen wird nur bei ausdrücklich angebotenem Tagesmodell zugelassen",
+        "Absage oder Verschiebung einzelner Tage informiert alle betroffenen Buchungen",
+        "Kosten und Terminliste werden als historische Buchungssicht gesichert"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "ANG-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03"
+      ],
+      "test": "Mehrtägiges Camp mit einem abgesagten Tag und gleichzeitiger Buchung des letzten Platzes testen.",
+      "decision": "",
+      "github": {
+        "number": 44,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/44"
+      }
+    },
+    {
+      "id": "ANG-05",
+      "epic": "E04",
+      "title": "Geburtstage vom Wunschtermin bis zur Bestätigung abwickeln",
+      "role": "Elternteil",
+      "benefit": "ein betreutes Geburtstagsangebot verbindlich vereinbaren zu können",
+      "criteria": [
+        "Anfrage erfasst Wunschtermin, Gruppe, Alter und verantwortliche Kontaktperson",
+        "Anfrage bestätigt ausschließlich den Eingang und blockiert noch keinen Kursplatz",
+        "Planung prüft Ort, Betreuung und verfügbare Zeitfenster",
+        "Ein befristetes Angebot nennt Leistungen, Kosten und Stornobedingungen",
+        "Annahme und Freigabe durch Planung erzeugen eine verbindliche bestätigte Veranstaltung",
+        "Ablehnung, Gegenangebot und Fristablauf sind dokumentiert und verständlich kommuniziert"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "WEB-05",
+        "KOM-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F05"
+      ],
+      "test": "Zwei Anfragen für dasselbe Zeitfenster, abgelaufenes Angebot und doppelten Annahmeklick prüfen.",
+      "decision": "D08",
+      "github": {
+        "number": 46,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/46"
+      }
+    },
+    {
+      "id": "ANG-06",
+      "epic": "E04",
+      "title": "Schul-AGs, Gruppen und Firmenevents als Anfrage anbieten",
+      "role": "Kooperationspartner",
+      "benefit": "ein passendes betreutes Gruppenangebot zu erhalten",
+      "criteria": [
+        "Formular unterscheidet Schul-AG, Workshop, Firmenevent und sonstige Gruppe",
+        "Gruppengröße, Zeitraum, Ort und organisatorische Kontaktperson sind erfassbar",
+        "Es werden keine vollständigen Kinderlisten in der Erstanfrage verlangt",
+        "Angebot und Zuordnung zur zuständigen Planung sind nachvollziehbar",
+        "Bestätigung übernimmt geprüfte Termine und Kapazitäten in die Einsatzplanung",
+        "Unverbindliche Anfrage ist optisch und in E-Mails von einer Buchung getrennt"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "WEB-05",
+        "KOM-01"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F03",
+        "F05",
+        "W02"
+      ],
+      "test": "Mehrere Alternativtermine, fehlende Kontaktadresse und falsche personenbezogene Uploads prüfen.",
+      "decision": "",
+      "github": {
+        "number": 47,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/47"
+      }
+    },
+    {
+      "id": "ANG-07",
+      "epic": "E04",
+      "title": "Leihmaterial und Ausrüstung im Angebot berücksichtigen",
+      "role": "buchende Person",
+      "benefit": "Ausrüstung und Zusatzkosten vor der Anmeldung zu kennen",
+      "criteria": [
+        "Board, Helm und Schutzausrüstung sind einzeln konfigurierbare Leihkategorien",
+        "Vorgegebene Leihgebühr beträgt im übernommenen Referenzmodell 5 Euro je Kategorie und Buchungseinheit",
+        "Kosten werden ausschließlich auf dem Server berechnet",
+        "Ausrüstungsbedarf bleibt in Bestätigung und Teilnehmerliste konsistent",
+        "Hinweise zu eigener Ausrüstung und Schutzregeln sind direkt erreichbar",
+        "Übernahme von Verzichtserklärungen erfolgt erst nach aktueller fachlicher Sicherheitsfreigabe"
+      ],
+      "depends_on": [
+        "ANG-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F02",
+        "F03",
+        "T01"
+      ],
+      "test": "Manipulierten Browserpreis, mehrere Camptage und widersprüchliche Leihantworten prüfen.",
+      "decision": "D09",
+      "github": {
+        "number": 23,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/23"
+      }
+    },
+    {
+      "id": "ANG-08",
+      "epic": "E04",
+      "title": "Regelmäßige Kurse und Kursblöcke buchbar machen",
+      "role": "Mitglied",
+      "benefit": "auch wiederkehrende Angebote online anzumelden",
+      "criteria": [
+        "Referenzlücke der nicht buchbaren regelmäßigen Kurse ist ausdrücklich geschlossen",
+        "Ein freigegebenes Modell unterscheidet Blockbuchung und einzelne Termine",
+        "Bei Blockbuchung werden alle benötigten Plätze atomar geprüft",
+        "Ein voller Teiltermin verhindert Teilbestätigung ohne bewusste Alternative",
+        "Ferien, Ersatztermine und spätere Serienänderungen sind für die Buchung sichtbar",
+        "Storno- und Preisregel für angebrochene Blöcke ist vor der Aktivierung dokumentiert"
+      ],
+      "depends_on": [
+        "ANG-02",
+        "BUC-01",
+        "BUC-02"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03",
+        "T01"
+      ],
+      "test": "Block mit einem vollen Termin, verschobener Folgewoche und paralleler Block-/Einzelbuchung prüfen.",
+      "decision": "D10",
+      "github": {
+        "number": 48,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/48"
+      }
+    },
+    {
+      "id": "BUC-01",
+      "epic": "E05",
+      "title": "Gastbuchung mit Minderjährigen- und Einwilligungslogik anbieten",
+      "role": "Elternteil",
+      "benefit": "ein Kind ohne erzwungenes Benutzerkonto anzumelden",
+      "criteria": [
+        "Buchung erfasst die laut Angebotskonfiguration notwendigen Teilnehmer- und Kontaktdaten",
+        "Alter wird am tatsächlichen Angebotsbeginn berechnet",
+        "Unter 18 Jahren sind Name und Telefonnummer einer erziehungsberechtigten Person erforderlich",
+        "Datenschutzhinweis wird als Kenntnisnahme mit Version dokumentiert",
+        "Optionales sensibles Freitextfeld ist standardmäßig aus und benötigt gesonderte freigegebene Einwilligung",
+        "Ungültige Eingabe erhält Feldfehler ohne unnötigen Verlust bereits erfasster Daten"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "ANG-07",
+        "GOV-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F04",
+        "T01"
+      ],
+      "test": "Person wird am Kurstag 18, falsches Geburtsdatum, fehlende Elternangabe und abgelehnte optionale Einwilligung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 25,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/25"
+      }
+    },
+    {
+      "id": "BUC-02",
+      "epic": "E05",
+      "title": "Plätze atomar reservieren und per E-Mail bestätigen",
+      "role": "buchende Person",
+      "benefit": "einen Platz ohne Überbuchung zuverlässig zu sichern",
+      "criteria": [
+        "Reservierung gilt höchstens 60 Minuten und endet spätestens mit Kursbeginn",
+        "Freie Plätze sind Kapazität minus bestätigte und noch aktive reservierte Plätze",
+        "Parallele Anfragen auf den letzten Platz erzeugen höchstens eine erfolgreiche Reservierung",
+        "Bestätigungslink ist zweckgebunden und nach Ablauf nicht nutzbar",
+        "Wiederholtes Bestätigen verändert weder Zähler noch Buchung erneut",
+        "Ablauf und Bestätigung werden auch bei konkurrierenden Worker-/Webzugriffen atomar entschieden"
+      ],
+      "depends_on": [
+        "BUC-01",
+        "BAS-02"
+      ],
+      "points": 13,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F05",
+        "T01"
+      ],
+      "test": "Dateibasiertes SQLite mit getrennten Verbindungen: 20 parallele Anfragen auf einen Platz; Ablauf exakt an der Zeitgrenze; Commitfehler.",
+      "decision": "D11",
+      "github": {
+        "number": 26,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/26"
+      }
+    },
+    {
+      "id": "BUC-03",
+      "epic": "E05",
+      "title": "Preise und Mitgliedervorteile historisch korrekt berechnen",
+      "role": "buchende Person",
+      "benefit": "vor der Bestätigung einen verlässlichen Gesamtbetrag zu sehen",
+      "criteria": [
+        "Mitglieder- und Nichtmitgliederpreise werden als nichtnegative ganze Cent gespeichert",
+        "Kursgebühr plus Leihgebühr ergibt den serverseitigen Gesamtbetrag",
+        "R1 kennzeichnet selbst angegebene Mitgliedschaft als prüfbedürftig",
+        "Ab R2 nutzt die Berechtigung den wirksamen Mitgliedschaftsstatus statt Browserangaben",
+        "Buchung speichert Preisgruppe, Preisregel und Beträge zum Buchungszeitpunkt",
+        "Spätere Preisänderung verändert keine bereits bestätigte Kostenaufstellung"
+      ],
+      "depends_on": [
+        "BUC-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04",
+        "F05",
+        "T01"
+      ],
+      "test": "Dezimal-Komma, Preis von 0 Euro, manipulierte Centwerte und nachträgliche Preisänderung prüfen.",
+      "decision": "D12",
+      "github": {
+        "number": 49,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/49"
+      }
+    },
+    {
+      "id": "BUC-04",
+      "epic": "E05",
+      "title": "Buchungse-Mails und Versandwiederholung zuverlässig ausliefern",
+      "role": "buchende Person",
+      "benefit": "Status, Termine und Kosten auch nach einem Mailfehler zu erhalten",
+      "criteria": [
+        "Reservierung, Bestätigung, Ablauf und Storno verwenden klar unterscheidbare Texte",
+        "Dauerhafte Outbox entsteht in derselben Transaktion wie die fachliche Änderung",
+        "Solid Queue verarbeitet und wiederholt fehlgeschlagene Auslieferungen",
+        "Eindeutiger Ereignisschlüssel verhindert mehrfach erzeugte fachliche Benachrichtigungen",
+        "Admin erkennt fehlgeschlagene Zustellung und kann berechtigt erneut auslösen",
+        "Empfängerdaten und Tokens werden weder in Logmeldungen noch offenen Auditdetails ausgegeben"
+      ],
+      "depends_on": [
+        "BUC-02",
+        "BAS-04"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F05",
+        "T01"
+      ],
+      "test": "SMTP-Timeout nach Annahme, Workerabbruch und Wiederholung simulieren; mögliche Transportdubletten fachlich schadlos halten.",
+      "decision": "",
+      "github": {
+        "number": 50,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/50"
+      }
+    },
+    {
+      "id": "BUC-05",
+      "epic": "E05",
+      "title": "Selbststorno, Umbuchung und Angebotsabsage durchführen",
+      "role": "buchende Person",
+      "benefit": "eine Buchung gemäß den bekannten Regeln ändern zu können",
+      "criteria": [
+        "Sicherer Stornolink zeigt vor Ausführung die betroffene Buchung",
+        "Zulässige Frist und mögliche Kosten sind vor Bestätigung sichtbar",
+        "Storno gibt den Platz atomar frei und erzeugt eine nachvollziehbare Aktion",
+        "Umbuchung prüft Zielkapazität und hält Ursprung bei Fehlschlag unverändert",
+        "Angebotsabsage informiert bestätigte und wartende Personen ohne neue Zusage",
+        "Finanzielle Korrekturen folgen einem eigenen Belegprozess und überschreiben keine Rechnung"
+      ],
+      "depends_on": [
+        "BUC-02",
+        "BUC-04"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04",
+        "F05",
+        "T01"
+      ],
+      "test": "Doppelstorno, parallele Umbuchung auf den letzten Platz und abgelaufenen Link prüfen.",
+      "decision": "D13",
+      "github": {
+        "number": 51,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/51"
+      }
+    },
+    {
+      "id": "BUC-06",
+      "epic": "E05",
+      "title": "Warteliste mit befristetem Nachrückangebot anbieten",
+      "role": "Interessentin",
+      "benefit": "bei einem vollen Angebot fair nachrücken zu können",
+      "criteria": [
+        "Nur nicht mehr regulär verfügbare Angebote bieten den Wartelisteneinstieg",
+        "Kontaktbestätigung und eindeutiger Eintrag verhindern unbeabsichtigte Doppelanmeldung",
+        "Nachrücken folgt dokumentierter FIFO-Reihenfolge ohne stille Bevorzugung",
+        "Frei gewordener Platz erzeugt genau ein befristetes Angebot mit 24 Stunden Annahmefrist, gekürzt auf den Buchungsschluss",
+        "Annahme verwendet denselben atomaren Kapazitätsprozess wie eine normale Buchung",
+        "Ablauf, Ablehnung und manueller Eingriff sind nachvollziehbar und bedienen die nächste berechtigte Person"
+      ],
+      "depends_on": [
+        "BUC-02",
+        "BUC-04",
+        "BUC-05"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F05"
+      ],
+      "test": "Zwei freie Plätze, gleichzeitiges reguläres Buchen, doppeltes Nachrücken und Ende der Annahmefrist testen.",
+      "decision": "D14",
+      "github": {
+        "number": 52,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/52"
+      }
+    },
+    {
+      "id": "BUC-07",
+      "epic": "E05",
+      "title": "Teilnehmerlisten, Check-in und Anwesenheit je Termin führen",
+      "role": "zugeordneter Coach",
+      "benefit": "den betreuten Termin sicher organisieren zu können",
+      "criteria": [
+        "Liste enthält nur notwendige Daten bestätigter Buchungen",
+        "Coachzugriff besteht ausschließlich für aktive Zuordnung im freigegebenen Zeitfenster",
+        "Anwesend, abwesend, entschuldigt und offen sind je Termin erfassbar",
+        "Mehrtägige Angebote haben getrennte Anwesenheit je Tag",
+        "Änderung, handelnde Person und Zeitpunkt werden nachvollziehbar protokolliert",
+        "Entzug der Zuordnung sperrt Listen, Detail und Export beim nächsten Request"
+      ],
+      "depends_on": [
+        "BUC-02",
+        "BAS-03",
+        "ANG-04"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F04",
+        "T01"
+      ],
+      "test": "Fremder Kurs, Zugriff außerhalb sieben Tagen vor/nach dem Termin und paralleler Check-in dürfen keine unzulässigen Änderungen erlauben.",
+      "decision": "",
+      "github": {
+        "number": 53,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/53"
+      }
+    },
+    {
+      "id": "BUC-08",
+      "epic": "E05",
+      "title": "Manuelle Buchungen und sichere Exporte ermöglichen",
+      "role": "Verwaltung",
+      "benefit": "Telefonanmeldungen und benötigte Teilnehmerdaten konsistent zu bearbeiten",
+      "criteria": [
+        "Manuelle Anmeldung verwendet dieselben Kapazitäts- und Preisregeln",
+        "Direktbestätigung durch berechtigte Verwaltung ist als manuell protokolliert",
+        "Filter nach Termin, Status und notwendigem Teilnehmermerkmal sind kombinierbar",
+        "CSV-Export erfordert explizite berechtigte Aktion und schützt vor Tabellenformeln",
+        "Export enthält keine Tokens und keine sensiblen Freitexte",
+        "Anonymisierte Buchungen und nicht mehr berechtigte Kurse bleiben ausgeschlossen"
+      ],
+      "depends_on": [
+        "BUC-02",
+        "BUC-03",
+        "BUC-07"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F04",
+        "T01"
+      ],
+      "test": "Telefonbuchung parallel zur Gastbuchung, CSV mit =-Präfix und Exportzugriff nach Rollenentzug prüfen.",
+      "decision": "",
+      "github": {
+        "number": 54,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/54"
+      }
+    },
+    {
+      "id": "BUC-09",
+      "epic": "E05",
+      "title": "Kurs- und Wettermitteilungen gezielt versenden",
+      "role": "Kursplanung",
+      "benefit": "Teilnehmende bei Änderungen rechtzeitig zu erreichen",
+      "criteria": [
+        "Terminänderung, Ausfall und Regenersatz besitzen getrennte Nachrichtentypen",
+        "Empfänger werden vor dem Versand als Anzahl und Auswahlgrund angezeigt",
+        "Es werden nur aktuell betroffene bestätigte Kontakte angeschrieben",
+        "Keine Empfängeradresse wird anderen Teilnehmenden offengelegt",
+        "Nachrichten und Ergebnisstatus sind minimiert nachvollziehbar",
+        "Die Kursentscheidung stammt von Berechtigten und wird nicht automatisch aus einer Wetteranzeige abgeleitet"
+      ],
+      "depends_on": [
+        "BUC-04",
+        "BUC-07"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F02",
+        "F05",
+        "T01"
+      ],
+      "test": "Abgesagte, umgebuchte und anonymisierte Kontakte kurz vor Versand erneut prüfen; Mailausfall wiederholen.",
+      "decision": "",
+      "github": {
+        "number": 55,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/55"
+      }
+    },
+    {
+      "id": "BUC-10",
+      "epic": "E05",
+      "title": "Automatische Erinnerungen zustandsabhängig versenden",
+      "role": "Teilnehmerin",
+      "benefit": "rechtzeitig an den tatsächlich stattfindenden Termin erinnert zu werden",
+      "criteria": [
+        "Erinnerung wird nach Planungsvorgabe 24 Stunden vor Beginn fällig",
+        "Coach- und Teilnehmererinnerung nutzen getrennte Empfängerregeln",
+        "Versand prüft erneut Buchungs-, Termin- und Zuordnungsstatus",
+        "Verschiebung erzeugt keine Erinnerung zum alten Termin",
+        "Wiederholter Schedulerlauf erzeugt keine neuen Duplikatereignisse",
+        "Ausgefallener Scheduler und überfällige Nachrichten sind im Betrieb erkennbar"
+      ],
+      "depends_on": [
+        "BUC-04",
+        "BUC-07"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F05",
+        "T01"
+      ],
+      "test": "Terminverschiebung nach Planung, DST-Wechsel, entfernter Coach und mehrfacher Schedulerlauf testen.",
+      "decision": "",
+      "github": {
+        "number": 56,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/56"
+      }
+    },
+    {
+      "id": "EVT-01",
+      "epic": "E06",
+      "title": "Veranstaltungskalender und Eventdetails veröffentlichen",
+      "role": "Communitymitglied",
+      "benefit": "Contests und Vereinsveranstaltungen zu planen",
+      "criteria": [
+        "Landesmeisterschaften, Contests, Jam Sessions, School’s Out und Ferienprogramme sind kategorisierbar",
+        "Liste und Kalender zeigen Datum, Ort, Veranstalter und Status",
+        "Mehrtagestermine bleiben auf Mobilgeräten verständlich",
+        "Vergangene Events wechseln in ein Archiv und gelten nicht als nächste Veranstaltung",
+        "Absage und Verschiebung werden in Liste, Detail und Startseite konsistent angezeigt",
+        "Kalenderexport enthält nur öffentliche Daten und aktualisierbare Eventkennungen"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "ANG-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F01",
+        "F03",
+        "F05"
+      ],
+      "test": "Mehrtagesevent, abgesagten Contest, Jahreswechsel und leeren Monat prüfen.",
+      "decision": "",
+      "github": {
+        "number": 30,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/30"
+      }
+    },
+    {
+      "id": "EVT-02",
+      "epic": "E06",
+      "title": "Online-Anmeldung für Veranstaltungen integrieren",
+      "role": "Eventbesucherin",
+      "benefit": "ohne separates System anmeldepflichtige Events zu buchen",
+      "criteria": [
+        "Event legt fest, ob Anmeldung notwendig, extern oder ohne Anmeldung möglich ist",
+        "Interne Anmeldung verwendet Kapazitäts-, Minderjährigen- und Bestätigungsregeln der Buchung",
+        "Kosten und Veranstalter sind vor Anmeldung sichtbar",
+        "Eventabsage löst passende Benachrichtigung aus",
+        "Externe Anmeldung wird vor Verlassen der Website deutlich bezeichnet",
+        "Keine zusätzliche Kopie des Buchungsmodells wird eingeführt"
+      ],
+      "depends_on": [
+        "EVT-01",
+        "BUC-02",
+        "BUC-04"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R1",
+      "source": [
+        "F03"
+      ],
+      "test": "Kostenloses Event, volles Event und externes Ziel mit ungültiger URL prüfen.",
+      "decision": "",
+      "github": {
+        "number": 57,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/57"
+      }
+    },
+    {
+      "id": "KOM-01",
+      "epic": "E06",
+      "title": "Kontaktanliegen und Gruppenanfragen zustellen",
+      "role": "Vereinsbüro",
+      "benefit": "Anfragen dem richtigen Bearbeitungskanal zuzuordnen",
+      "criteria": [
+        "Anliegen unterscheiden Kurs, Geburtstag, Mitgliedschaft, Kooperation und allgemeine Frage",
+        "Bestätigung nennt eine Vorgangskennung ohne vertraulichen Inhalt",
+        "Empfänger werden zentral konfiguriert und nicht aus Formularparametern übernommen",
+        "Mailfehler behalten die Anfrage zur kontrollierten erneuten Zustellung",
+        "Bearbeitungsstatus ist nur zuständigen Personen sichtbar",
+        "Abgeschlossene Anfragen folgen einer freigegebenen Löschfrist"
+      ],
+      "depends_on": [
+        "WEB-05",
+        "BAS-03"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04"
+      ],
+      "test": "Empfängermanipulation, doppelter Request und SMTP-Ausfall prüfen; Zugriff eines fremden Teams sperren.",
+      "decision": "D04",
+      "github": {
+        "number": 45,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/45"
+      }
+    },
+    {
+      "id": "KOM-02",
+      "epic": "E06",
+      "title": "Newsletter mit bestätigter Anmeldung anbieten",
+      "role": "Interessentin",
+      "benefit": "freiwillig aktuelle Vereinsinformationen zu erhalten",
+      "criteria": [
+        "Newslettereinwilligung ist von Buchung und Mitgliedschaft getrennt",
+        "Anmeldung wird erst nach Double-Opt-in aktiv",
+        "Jede Ausgabe bietet einen wirksamen Abmeldelink ohne Login",
+        "Einwilligungswortlaut, Zeitpunkt und Bestätigung sind nachweisbar",
+        "Abgemeldete Kontakte werden vor jedem Versand ausgeschlossen",
+        "Anbieter, Auftragsverarbeitung und Abmelde-/Löschprozess sind vor Aktivierung entschieden"
+      ],
+      "depends_on": [
+        "GOV-01"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F05"
+      ],
+      "test": "Unbestätigte Anmeldung, wiederholter Opt-in und Abmeldung nach Erstellen einer Versandliste prüfen.",
+      "decision": "D15",
+      "github": {
+        "number": 58,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/58"
+      }
+    },
+    {
+      "id": "FIN-01",
+      "epic": "E07",
+      "title": "Rechnungen und Korrekturbelege automatisch erstellen",
+      "role": "Kassenführung",
+      "benefit": "bestätigte kostenpflichtige Leistungen nachvollziehbar abzurechnen",
+      "criteria": [
+        "Beleg entsteht aus dem freigegebenen Leistungs- und Preis-Snapshot",
+        "Nummern sind eindeutig und werden bei Parallelität nicht doppelt vergeben",
+        "Ausgestellte Rechnungen sind unveränderlich; Korrektur erfolgt mit Referenzbeleg",
+        "Steuer-, Pflichtangaben und gegebenenfalls E-Rechnungsformat sind vor Aktivierung geprüft",
+        "PDF beziehungsweise freigegebenes strukturiertes Format und Versandstatus werden archiviert",
+        "Kostenlose Leistungen erzeugen nur den festgelegten kostenfreien Nachweis"
+      ],
+      "depends_on": [
+        "BUC-03",
+        "BUC-04",
+        "GOV-02"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F04",
+        "F05"
+      ],
+      "test": "Paralleler Rechnungslauf, nachträgliche Preisänderung, Storno nach Rechnung und erneuter Versand prüfen.",
+      "decision": "D16",
+      "github": {
+        "number": 60,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/60"
+      }
+    },
+    {
+      "id": "FIN-02",
+      "epic": "E07",
+      "title": "Zahlungen vor Ort und Forderungsstatus nachvollziehbar führen",
+      "role": "Kassenführung",
+      "benefit": "offene Beträge ohne vermeintliche Online-Zahlung zu erkennen",
+      "criteria": [
+        "R1 übernimmt den vorhandenen internen Status offen/bezahlt als Zahlung-vor-Ort-Vermerk",
+        "Status ist von Buchungsbestätigung und Teilnahme unabhängig",
+        "Änderungen erfolgen nur durch fachlich berechtigte Personen mit Audit",
+        "Gebührenfreie Buchungen erhalten keinen offenen Zahlungsstatus",
+        "R2 definiert Teilzahlung, Rückzahlung und Korrektur als separate nachvollziehbare Buchungen",
+        "Keine Zahlungsanbieter- oder Kartendaten werden im Kursformular gespeichert"
+      ],
+      "depends_on": [
+        "BUC-03",
+        "BAS-03"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01",
+        "F04",
+        "F05"
+      ],
+      "test": "Nullbetrag, unberechtigter Coach, wiederholter Statuswechsel und anonymisierter Datensatz prüfen.",
+      "decision": "D16",
+      "github": {
+        "number": 61,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/61"
+      }
+    },
+    {
+      "id": "FIN-03",
+      "epic": "E07",
+      "title": "Beitragsläufe und Finanzexporte vorbereiten",
+      "role": "Kassenführung",
+      "benefit": "Vereinsbeiträge kontrolliert einzuziehen oder abzurechnen",
+      "criteria": [
+        "Beitrag wird anhand gültiger Beitragsordnung und Mitgliedschaftsart berechnet",
+        "Vorschau zeigt fällige Personen, Beträge, Ausnahmen und Gesamtsumme",
+        "Freigabe erzeugt pro Periode und Mitglied höchstens eine Forderung",
+        "SEPA wird nur mit freigegebenem Mandatsmodell und gültigem Nachweis aktiviert",
+        "Export enthält ausschließlich notwendige Finanzdaten und verhindert Tabellenformeln",
+        "Rückläufer und Fehler werden ohne automatisches Beenden der Mitgliedschaft bearbeitet"
+      ],
+      "depends_on": [
+        "MIT-01",
+        "MIT-02",
+        "FIN-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F02",
+        "F04"
+      ],
+      "test": "Wiederholter Lauf, Eintritt während der Periode, gekündigtes Mitglied und ungültiges Mandat prüfen.",
+      "decision": "D17",
+      "github": {
+        "number": 64,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/64"
+      }
+    },
+    {
+      "id": "FIN-04",
+      "epic": "E07",
+      "title": "Rechnungen und Buchungsbelege im eigenen Portal anzeigen",
+      "role": "Mitglied",
+      "benefit": "die eigenen Belege sicher wiederzufinden",
+      "criteria": [
+        "Portal listet nur Belege der eigenen freigegebenen Rechnungsempfängerbeziehung",
+        "Belegzugriff prüft Berechtigung bei jedem Download",
+        "Korrekturbelege sind mit Originalbelegen verknüpft",
+        "Familienbeziehungen verleihen keine unbegrenzten Rechte auf fremde Belege",
+        "Ausgestellte Belege bleiben nach Kontoschließung gemäß freigegebener Frist geschützt verfügbar",
+        "Versandwiederholung ändert weder Rechnungsnummer noch Betrag"
+      ],
+      "depends_on": [
+        "FIN-01",
+        "MIT-06"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F04"
+      ],
+      "test": "Erratene Beleg-ID, entzogene Sorgeberechtigung, abgelaufener Link und Korrekturbeleg prüfen.",
+      "decision": "",
+      "github": {
+        "number": 66,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/66"
+      }
+    },
+    {
+      "id": "FIN-05",
+      "epic": "E07",
+      "title": "Online-Zahlungsmodell für Angebote entscheiden",
+      "role": "Vereinsvorstand",
+      "benefit": "über Online-Zahlung anhand von Kosten und Betriebsfolgen zu entscheiden",
+      "criteria": [
+        "Entscheidung vergleicht Zahlung vor Ort, Überweisung und gehosteten Zahlungsanbieter",
+        "Gebühren, Erstattungen, Buchhaltung, Datenflüsse und Verantwortliche sind dokumentiert",
+        "Anbieter-Sandbox prüft Zahlung, Abbruch und Rückerstattung nur mit Testdaten",
+        "Buchungsstatus, Forderung und Zahlungsstatus bleiben getrennt",
+        "Doppelte und verspätete Webhooks sind Teil des freigegebenen Vertrags",
+        "Aktivierung für Kurse erfolgt ausschließlich als eigener freigegebener Ausbau und ist kein R1-Blocker"
+      ],
+      "depends_on": [
+        "FIN-01",
+        "FIN-02"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R3",
+      "source": [
+        "F05"
+      ],
+      "test": "Entscheidungsnachweis und Sandboxprotokoll mit abgebrochener Zahlung und doppeltem Webhook vorlegen.",
+      "decision": "D18",
+      "github": {
+        "number": 67,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/67"
+      }
+    },
+    {
+      "id": "MIT-01",
+      "epic": "E08",
+      "title": "Mitgliedschaft, Beiträge und Vorteile verständlich erklären",
+      "role": "Vereinsinteressentin",
+      "benefit": "vor einem Antrag die Bedingungen zu verstehen",
+      "criteria": [
+        "Aktive, Familien- und Fördermitgliedschaft werden nur gemäß beschlossener Ordnung angeboten",
+        "Beitrag, Zahlungsrhythmus, Aufnahmebedingungen und Kündigungsregel sind sichtbar",
+        "Vorteile unterscheiden Kursrabatt, Shoprabatt und sonstige Vereinsleistungen",
+        "Aktuelle Satzung und Beitragsordnung sind direkt verlinkt",
+        "Änderungen haben Version und Wirksamkeitsdatum",
+        "Keine redaktionelle Vorteilsbeschreibung verspricht technisch noch nicht verfügbare Rabatte"
+      ],
+      "depends_on": [
+        "WEB-02",
+        "WEB-07"
+      ],
+      "points": 3,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F02",
+        "F03",
+        "F04"
+      ],
+      "test": "Vergleich veröffentlichter Beiträge mit Antrags- und Berechnungsansicht; zukünftige Ordnung darf nicht vorzeitig wirken.",
+      "decision": "D17",
+      "github": {
+        "number": 62,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/62"
+      }
+    },
+    {
+      "id": "MIT-02",
+      "epic": "E08",
+      "title": "Online-Mitgliedsantrag und Aufnahme bearbeiten",
+      "role": "antragstellende Person",
+      "benefit": "eine Vereinsmitgliedschaft digital beantragen zu können",
+      "criteria": [
+        "Antrag erfasst nur die für die gewählte Mitgliedschaft erforderlichen Daten",
+        "Minderjährige benötigen den festgelegten Erziehungsberechtigten-Nachweis",
+        "Abgabe bestätigt den Eingang und behauptet noch keine Aufnahme",
+        "Verwaltung kann Antrag prüfen, Rückfrage stellen, annehmen oder ablehnen",
+        "Aufnahme erzeugt eindeutige Mitgliedsnummer, Startdatum und Status",
+        "Satzungs-, Beitrags- und Datenschutzversion werden mit der Antragserklärung dokumentiert"
+      ],
+      "depends_on": [
+        "MIT-01",
+        "BAS-03",
+        "GOV-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F02",
+        "F03"
+      ],
+      "test": "Doppelantrag, fehlende elterliche Vertretung, Ablehnung und erneuter Annahmeklick prüfen.",
+      "decision": "D17",
+      "github": {
+        "number": 63,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/63"
+      }
+    },
+    {
+      "id": "MIT-03",
+      "epic": "E08",
+      "title": "Mitgliederdaten und Änderungen im Selbstservice pflegen",
+      "role": "Mitglied",
+      "benefit": "eigene Kontaktdaten aktuell zu halten",
+      "criteria": [
+        "Mitglied sieht ausschließlich das eigene fachliche Profil",
+        "Kontakt- und Adressänderungen werden validiert und nachvollziehbar gespeichert",
+        "Neue E-Mail-Adresse wird vor Übernahme bestätigt",
+        "Mitgliedsnummer, Beitragsart und Aufnahmestatus können nicht selbst manipuliert werden",
+        "Bank-/Mandatsänderungen folgen gesondertem geschütztem Freigabeprozess",
+        "Verwaltung erhält nur für notwendige Folgebearbeitung eine Änderungsmitteilung"
+      ],
+      "depends_on": [
+        "MIT-02",
+        "MIT-06"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F02",
+        "F04"
+      ],
+      "test": "Fremde Mitglieds-ID, unbestätigte E-Mail und Manipulation des Beitragstyps über direkten Request prüfen.",
+      "decision": "",
+      "github": {
+        "number": 68,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/68"
+      }
+    },
+    {
+      "id": "MIT-04",
+      "epic": "E08",
+      "title": "Kündigungen und Mitgliedschaftswechsel abwickeln",
+      "role": "Mitglied",
+      "benefit": "eine Änderung mit verlässlichem Wirksamkeitsdatum einzureichen",
+      "criteria": [
+        "Kündigungsanfrage nennt Eingang und berechnetes vorgesehenes Enddatum",
+        "Fristen folgen der wirksamen Ordnung statt hart codierter Annahmen",
+        "Ausnahmeentscheidung ist berechtigt, begründet und protokolliert",
+        "Wirksamkeit beendet Vorteile und künftige Beitragsforderungen zum richtigen Zeitpunkt",
+        "Bestehende Buchungen und ausgestellte Belege werden nicht stillschweigend gelöscht",
+        "Mitglied erhält nachvollziehbare Bestätigung und Kontaktweg für Rückfragen"
+      ],
+      "depends_on": [
+        "MIT-02",
+        "FIN-03"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F02"
+      ],
+      "test": "Kündigung an der Fristgrenze, spätere Rücknahme und erneuter Periodenlauf prüfen.",
+      "decision": "D17",
+      "github": {
+        "number": 69,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/69"
+      }
+    },
+    {
+      "id": "MIT-05",
+      "epic": "E08",
+      "title": "Mitgliedervorteile zentral und zeitabhängig prüfen",
+      "role": "Mitglied",
+      "benefit": "berechtigte Vergünstigungen automatisch zu erhalten",
+      "criteria": [
+        "Zentrale Berechtigungsprüfung berücksichtigt Art, Beginn, Ende und wirksamen Status",
+        "Kurse und Shop nutzen dieselbe fachliche Mitgliedschaftsquelle",
+        "Noch ungeprüfter Antrag gilt nicht als aktive Mitgliedschaft",
+        "Abgelaufene Mitgliedschaft erhält beim neuen Kauf keine Vorteile",
+        "Preis-Snapshots bereits getätigter Käufe bleiben unverändert",
+        "Manuelle Sonderregel benötigt Gültigkeit, Grund und berechtigte Freigabe"
+      ],
+      "depends_on": [
+        "MIT-02",
+        "MIT-04",
+        "BUC-03"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Übergang exakt am Mitgliedschaftsende, offener Antrag und parallele Preisabfrage bei Kündigung prüfen.",
+      "decision": "D12",
+      "github": {
+        "number": 70,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/70"
+      }
+    },
+    {
+      "id": "MIT-06",
+      "epic": "E08",
+      "title": "Mein TheStep und freigegebene Familienbeziehungen bereitstellen",
+      "role": "Erziehungsberechtigte",
+      "benefit": "eigene und berechtigt zugeordnete Kinderbuchungen zu verwalten",
+      "criteria": [
+        "Ein Zugang zeigt eigene Buchungen, zugeordnete Kinder und Handlungsoptionen",
+        "Beziehung zum Kind wird nach einem dokumentierten Nachweisverfahren freigegeben",
+        "Gleiche E-Mail-Adresse oder gleicher Nachname genügt nicht zum Zusammenführen",
+        "Zweiter Sorgeberechtigter erhält nur ausdrücklich freigegebenen Zugriff",
+        "Widerruf oder Ende einer Beziehung sperrt den Zugriff beim nächsten Request",
+        "Vorhandene Gastbuchungen werden ausschließlich über einen sicheren Anspruchsnachweis zugeordnet"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "MIT-02",
+        "BUC-02"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Namensgleichheit, geteilte E-Mail, entzogene Beziehung und beanspruchte fremde Gastbuchung prüfen.",
+      "decision": "D19",
+      "github": {
+        "number": 65,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/65"
+      }
+    },
+    {
+      "id": "MIT-07",
+      "epic": "E08",
+      "title": "Geschützte Vereinsdokumente im Portal bereitstellen",
+      "role": "Mitglied",
+      "benefit": "interne freigegebene Unterlagen sicher abzurufen",
+      "criteria": [
+        "Dokumente haben öffentliche, Mitglieder- oder Mitarbeiterfreigabe",
+        "Mitgliedsstatus wird auch beim direkten Dateiabruf geprüft",
+        "Version, Datum und zugängliche Beschreibung sind sichtbar",
+        "Downloadlinks sind kurzlebig und nicht dauerhaft öffentlich",
+        "Entzug der Berechtigung sperrt bestehende Verweise",
+        "Nicht freigegebene Dokumente sind weder in Suche noch Sitemap enthalten"
+      ],
+      "depends_on": [
+        "MIT-06",
+        "WEB-07"
+      ],
+      "points": 3,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F02",
+        "F04"
+      ],
+      "test": "Direktlink nach Kündigung, fremde Dokument-ID und Browsercache auf gemeinsamem Gerät prüfen.",
+      "decision": "",
+      "github": {
+        "number": 71,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/71"
+      }
+    },
+    {
+      "id": "MIT-08",
+      "epic": "E08",
+      "title": "Elternhilfe und Ehrenamtseinsätze organisieren",
+      "role": "Elternteil",
+      "benefit": "freiwillig bei passenden Vereinsaufgaben zu helfen",
+      "criteria": [
+        "Verein veröffentlicht Aufgabe, Termin, Ort und benötigte Helferzahl",
+        "Anmeldung zur Hilfe ist freiwillig und von Kursbuchung getrennt",
+        "Eltern sehen eigene Zusagen und einen einfachen Rücktrittsweg",
+        "Koordination sieht nur notwendige Kontaktdaten zugesagter Helfer",
+        "Überbelegung eines Helferslots wird verhindert",
+        "Absage und Änderung informieren ausschließlich betroffene Helfer"
+      ],
+      "depends_on": [
+        "MIT-06",
+        "EVT-01",
+        "BUC-04"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F03"
+      ],
+      "test": "Letzten Helferslot parallel belegen, Rücktritt und abgesagte Veranstaltung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 72,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/72"
+      }
+    },
+    {
+      "id": "OPS-01",
+      "epic": "E09",
+      "title": "Trainereinsätze und Zuständigkeiten planen",
+      "role": "Kurskoordination",
+      "benefit": "passende Betreuung für alle Termine sicherzustellen",
+      "criteria": [
+        "Aktive Coaches können konkreten Terminen oder definierten Zeiträumen zugeordnet werden",
+        "Übersicht zeigt unbesetzte Termine und erforderliche Betreuungszahl",
+        "Zeitliche Überschneidung und gemeldete Abwesenheit erzeugen Warnung oder Sperre nach festgelegter Regel",
+        "Qualifikationen werden vor der Zuordnung nachvollziehbar geprüft",
+        "Zuordnung allein verleiht keine redaktionellen oder administrativen Rechte",
+        "Änderung und Entzug lösen aktuelle Informationen und sofortige Berechtigungsprüfung aus"
+      ],
+      "depends_on": [
+        "BUC-07",
+        "BAS-03"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Doppelbelegung, inaktiver Coach, ablaufende Qualifikation und später Zuordnungsentzug prüfen.",
+      "decision": "D20",
+      "github": {
+        "number": 73,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/73"
+      }
+    },
+    {
+      "id": "OPS-02",
+      "epic": "E09",
+      "title": "Persönlichen Mitarbeiterkalender und Kursbesetzung anzeigen",
+      "role": "Mitarbeiterin",
+      "benefit": "die eigenen Einsätze und freigegebenen Aufgaben zu überblicken",
+      "criteria": [
+        "Mein Kalender zeigt wirksame Einsätze mit Zeit, Ort und Status",
+        "Kursbesetzungsliste zeigt nur im eigenen Aufgabenbereich notwendige Personaldaten",
+        "Direkter Teilnehmerzugriff folgt weiterhin den zeitlichen Coachregeln",
+        "Absagen und Vertretungen werden ohne veraltete Zusagen dargestellt",
+        "Persönlicher Kalenderexport enthält keine Teilnehmer- oder Kinderdaten",
+        "Leerer Kalender und kollidierende Termine erhalten verständliche Hinweise"
+      ],
+      "depends_on": [
+        "OPS-01"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Zuweisung entfernen und vorhandenen Kalenderlink erneut laden; Export auf personenbezogene Kursdaten prüfen.",
+      "decision": "",
+      "github": {
+        "number": 74,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/74"
+      }
+    },
+    {
+      "id": "OPS-03",
+      "epic": "E09",
+      "title": "Arbeits- und Ehrenamtsstunden erfassen",
+      "role": "Mitarbeiterin",
+      "benefit": "geleistete Zeit nachvollziehbar einzureichen",
+      "criteria": [
+        "Eintrag enthält Datum, Beginn, Ende, Pause und Tätigkeit",
+        "Bezug zu einem Einsatz ist optional und prüfbar",
+        "Negative Dauer, Pause über Gesamtdauer und doppelte Zeiträume werden abgewiesen",
+        "Entwurf und eingereicht sind getrennte Zustände",
+        "Mitarbeitende bearbeiten nur eigene noch nicht freigegebene Einträge",
+        "Zeitberechnung behandelt Mitternacht und Zeitumstellung gemäß dokumentierter Regel"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "OPS-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Über-Mitternacht-Eintrag, DST-Wechsel, überlappende Tätigkeiten und fremde User-ID prüfen.",
+      "decision": "D21",
+      "github": {
+        "number": 75,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/75"
+      }
+    },
+    {
+      "id": "OPS-04",
+      "epic": "E09",
+      "title": "Stunden prüfen, freigeben und exportieren",
+      "role": "Koordination",
+      "benefit": "geprüfte Stunden an die Abrechnung zu übergeben",
+      "criteria": [
+        "Zuständige prüfende Person sieht eingereichte Einträge im freigegebenen Bereich",
+        "Freigeben und Zurückweisen dokumentiert Bearbeiter, Zeitpunkt und Kommentar",
+        "Eigene Freigabe wird nach dokumentierter Vier-Augen-Regel verhindert",
+        "Freigegebene Zeit kann nur durch nachvollziehbare Korrektur geändert werden",
+        "Periodenexport enthält nur geprüfte Stunden und schützt vor Tabellenformeln",
+        "Export ist keine automatische Gehalts- oder Honorarzahlung"
+      ],
+      "depends_on": [
+        "OPS-03"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R2",
+      "source": [
+        "F04"
+      ],
+      "test": "Selbstfreigabe, nachträgliche Änderung und doppelte Periodenübergabe prüfen.",
+      "decision": "D21",
+      "github": {
+        "number": 76,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/76"
+      }
+    },
+    {
+      "id": "OPS-05",
+      "epic": "E09",
+      "title": "Abwesenheit, Urlaub und Vertretung bearbeiten",
+      "role": "Mitarbeiterin",
+      "benefit": "Verhinderung frühzeitig mit der Einsatzplanung abzustimmen",
+      "criteria": [
+        "Abwesenheit wird mit Zeitraum und notwendiger Kategorie beantragt",
+        "Private Begründung wird nicht allen Kollegen angezeigt",
+        "Prüfung zeigt betroffene bestätigte Einsätze",
+        "Genehmigung entfernt keine Betreuung ohne geregelte Vertretung oder offene Warnung",
+        "Vertretung muss aktiv und fachlich berechtigt sein",
+        "Betroffene Coaches und Koordination erhalten eine konsistente Änderungsmitteilung"
+      ],
+      "depends_on": [
+        "OPS-01",
+        "OPS-02"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F04"
+      ],
+      "test": "Teilüberlappender Urlaub, kurzfristige Verhinderung und unqualifizierte Vertretung prüfen.",
+      "decision": "D20",
+      "github": {
+        "number": 77,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/77"
+      }
+    },
+    {
+      "id": "OPS-06",
+      "epic": "E09",
+      "title": "Interne News und Mitarbeiterdokumente bereitstellen",
+      "role": "Mitarbeiterin",
+      "benefit": "aktuelle interne Informationen am richtigen Ort zu finden",
+      "criteria": [
+        "Interne News und Dokumente haben definierte Zielgruppen",
+        "Nur berechtigte Redaktion veröffentlicht interne Inhalte",
+        "Kenntnisnahme kann für ausgewählte Sicherheitsunterlagen angefordert werden",
+        "Abgelaufene Dokumente werden als veraltet gekennzeichnet",
+        "Direktabruf prüft aktiven Zugang und Zielgruppenberechtigung",
+        "Interne Inhalte erscheinen weder in öffentlicher Suche noch öffentlichen Feeds"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "CMS-01",
+        "MIT-07"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F04"
+      ],
+      "test": "Öffentliche Suche, deaktivierter Mitarbeiter und Direktdateiabruf aus abgelaufener Sitzung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 78,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/78"
+      }
+    },
+    {
+      "id": "OPS-07",
+      "epic": "E09",
+      "title": "Materialbestand, Ausgabe und Wartung verwalten",
+      "role": "Materialkoordination",
+      "benefit": "Leihmaterial einsatzfähig und verfügbar zu halten",
+      "criteria": [
+        "Bestand unterscheidet Boards, Helme und Schutzausrüstung nach notwendiger Größe",
+        "Verfügbar, ausgeliehen, defekt und in Wartung sind getrennte Zustände",
+        "Ausgabe und Rückgabe werden einem Termin oder Vorgang zugeordnet",
+        "Defektes Material zählt nicht zur verfügbaren Ausstattung",
+        "Offener Leihbedarf ist aus Buchungen aggregiert sichtbar",
+        "Korrekturen und Verlust werden nachvollziehbar protokolliert"
+      ],
+      "depends_on": [
+        "ANG-07",
+        "BUC-07"
+      ],
+      "points": 8,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F02",
+        "F04"
+      ],
+      "test": "Gleichzeitige Ausgabe des letzten Helms, defektes Board und verspätete Rückgabe prüfen.",
+      "decision": "D22",
+      "github": {
+        "number": 79,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/79"
+      }
+    },
+    {
+      "id": "SHP-01",
+      "epic": "E10",
+      "title": "Handelsmodell und Shopschnittstelle entscheiden",
+      "role": "Vereinsvorstand",
+      "benefit": "einen wirtschaftlich und organisatorisch tragbaren Shop aufzusetzen",
+      "criteria": [
+        "Verglichen werden integrierter Rails-Shop und angebundener gehosteter Shop",
+        "Händler, Sortiment, Zahlungsanbieter, Versandgebiet und Verantwortliche sind benannt",
+        "Mitgliederpreisprüfung und Bestell-/Rechnungsdatenflüsse sind beschrieben",
+        "Betriebsaufwand, laufende Gebühren und Datenexport werden bewertet",
+        "Katalog, Checkout, Bestellungen und Gutscheine haben unabhängig vom Anbieter klare Zuständigkeiten",
+        "Entscheidung ist vor produktiver Checkout-Implementierung dokumentiert"
+      ],
+      "depends_on": [
+        "MIT-05",
+        "FIN-01",
+        "GOV-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Entscheidung anhand einer Beispielbestellung mit Mitgliederpreis, Retoure und Anbieter-Ausfall durchgehen.",
+      "decision": "D23",
+      "github": {
+        "number": 80,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/80"
+      }
+    },
+    {
+      "id": "SHP-02",
+      "epic": "E10",
+      "title": "Produkte, Varianten und Vereinskollektion darstellen",
+      "role": "Käuferin",
+      "benefit": "passende Skateprodukte und Vereinsmerchandise auszuwählen",
+      "criteria": [
+        "Kategorien decken Kleidung, Skateboards, Decks, Rollen, Zubehör und Vereinskollektion ab",
+        "Varianten bilden Größe, Farbe und notwendige produktspezifische Merkmale ab",
+        "Preise, Verfügbarkeit und freigegebene Produktbeschreibung sind sichtbar",
+        "Produktbilder nutzen zentrale Rechte- und Alternativtextregeln",
+        "Archivierte Produkte können nicht neu gekauft werden",
+        "Leere Kategorien und ausverkaufte Varianten haben verständliche Zustände"
+      ],
+      "depends_on": [
+        "SHP-01",
+        "CMS-03"
+      ],
+      "points": 5,
+      "priority": "P1",
+      "release": "R3",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Ausverkaufte Größe, fehlendes Bild und archivierte Variante über Direktlink prüfen.",
+      "decision": "",
+      "github": {
+        "number": 81,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/81"
+      }
+    },
+    {
+      "id": "SHP-03",
+      "epic": "E10",
+      "title": "Mitgliederpreise sicher im Shop anwenden",
+      "role": "Mitglied",
+      "benefit": "freigegebene Shopvergünstigungen automatisch zu nutzen",
+      "criteria": [
+        "Preisermittlung fragt zentrale wirksame Mitgliedschaft ab",
+        "Gast sieht Standardpreis und einen verständlichen Vorteils-Hinweis",
+        "Rabattkombinationen und Ausschlüsse sind fachlich festgelegt",
+        "Checkout prüft Berechtigung erneut vor verbindlichem Kauf",
+        "Bestellung speichert Preis- und Berechtigungs-Snapshot",
+        "Manipulierte Rabattparameter und abgelaufene Mitgliedschaft reduzieren den Preis nicht"
+      ],
+      "depends_on": [
+        "SHP-02",
+        "MIT-05"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Mitgliedschaft endet zwischen Warenkorb und Checkout; Rabatte werden im Browser manipuliert.",
+      "decision": "D12",
+      "github": {
+        "number": 82,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/82"
+      }
+    },
+    {
+      "id": "SHP-04",
+      "epic": "E10",
+      "title": "Warenkorb und bestandsfeste Reservierung umsetzen",
+      "role": "Käuferin",
+      "benefit": "nur verfügbare Ware zum angezeigten Preis zu bestellen",
+      "criteria": [
+        "Warenkorb erfasst Variante und Menge mit serverseitiger Preisberechnung",
+        "Mengen über Bestand und ungültige Varianten werden abgewiesen",
+        "Begrenzte Checkoutreservierung wird mit Ablaufzeit geführt",
+        "Parallele Käufe des letzten Artikels können den Bestand nicht negativ machen",
+        "Ablauf oder Zahlungsabbruch gibt reservierten Bestand kontrolliert frei",
+        "Mehrfacher Kaufklick mit gleichem Vorgang erzeugt keine Doppelbestellung"
+      ],
+      "depends_on": [
+        "SHP-02",
+        "SHP-03"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Zwei Checkoutprozesse für den letzten Artikel sowie Ablauf zeitgleich mit Zahlungsbestätigung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 83,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/83"
+      }
+    },
+    {
+      "id": "SHP-05",
+      "epic": "E10",
+      "title": "Gehosteten Checkout und Zahlungsrückmeldungen integrieren",
+      "role": "Käuferin",
+      "benefit": "einen Kauf sicher abschließen zu können",
+      "criteria": [
+        "Checkout zeigt Gesamtpreis, Versand, Steuerdarstellung und Händler vor Abschluss",
+        "Kartendaten verbleiben beim freigegebenen Zahlungsanbieter",
+        "Signierte Webhooks werden auf Herkunft, Ereignis-ID und Betrag geprüft",
+        "Browserrückkehr allein markiert keine Bestellung als bezahlt",
+        "Doppelte, verspätete und ungeordnete Ereignisse erzeugen keine doppelten Bestands- oder Belegaktionen",
+        "Abbruch und Anbieter-Ausfall lassen einen verständlichen kontrollierten Wiederaufnahmeweg"
+      ],
+      "depends_on": [
+        "SHP-04",
+        "FIN-01"
+      ],
+      "points": 13,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F01",
+        "F04"
+      ],
+      "test": "Anbietersandbox: bezahlt ohne Browserrückkehr, falscher Betrag, doppelte Webhooks, verspätete Zahlung nach Reservierungsablauf.",
+      "decision": "D23",
+      "github": {
+        "number": 84,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/84"
+      }
+    },
+    {
+      "id": "SHP-06",
+      "epic": "E10",
+      "title": "Bestellungen, Versand, Abholung und Retouren bearbeiten",
+      "role": "Shopteam",
+      "benefit": "Bestellungen nachvollziehbar bis zum Abschluss zu führen",
+      "criteria": [
+        "Bestellansicht unterscheidet Zahlung, Erfüllung, Versand und Retoure",
+        "Nur fachlich freigegebene Liefer- und Abholarten sind wählbar",
+        "Bestandskorrektur bei Rückgabe benötigt geprüftes Ergebnis",
+        "Rückerstattung besitzt Referenz zur ursprünglichen Zahlung und Belegkorrektur",
+        "Käufer erhält angemessene Bestell- und Versandinformationen",
+        "Shopberechtigung gewährt keinen Zugriff auf Kinder- und Trainingsdaten"
+      ],
+      "depends_on": [
+        "SHP-05"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F04"
+      ],
+      "test": "Teilretoure, verlorene Sendung, doppelte Erstattung und reine Shoprolle prüfen.",
+      "decision": "D23",
+      "github": {
+        "number": 85,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/85"
+      }
+    },
+    {
+      "id": "SHP-07",
+      "epic": "E10",
+      "title": "Digitale Geschenkgutscheine ausgeben und einlösen",
+      "role": "schenkende Person",
+      "benefit": "einen Gutschein mit nachvollziehbarem Restwert zu verschenken",
+      "criteria": [
+        "Freigegebenes Modell unterscheidet Wertgutschein und zweckgebundenen Kursgutschein",
+        "Code ist nicht erratbar und erscheint nicht in Logs",
+        "Ausgabe erfolgt nach bestätigter Zahlung beziehungsweise berechtigter manueller Freigabe",
+        "Einlösung und Restwertänderung sind atomar und historisch nachvollziehbar",
+        "Storno und Erstattung berücksichtigen Gutscheinanteil und gegebenenfalls Restwert",
+        "Gültigkeit, Übertragbarkeit und steuerliche Behandlung sind vor Verkauf festgelegt"
+      ],
+      "depends_on": [
+        "SHP-05",
+        "FIN-01"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F01",
+        "F04",
+        "F05"
+      ],
+      "test": "Gleichzeitige Einlösung desselben Restwerts, Teilbetrag, ungültiger Code und Rückerstattung prüfen.",
+      "decision": "D24",
+      "github": {
+        "number": 86,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/86"
+      }
+    },
+    {
+      "id": "SHP-08",
+      "epic": "E10",
+      "title": "Shopbedingungen und Rechnungskette freigeben",
+      "role": "Shopverantwortung",
+      "benefit": "den Handel mit aktuellen geprüften Informationen zu starten",
+      "criteria": [
+        "Impressum benennt den tatsächlich handelnden Anbieter",
+        "Versand, Lieferzeiten, Rückgabe-/Widerrufsinformationen und Kaufbedingungen sind geprüft",
+        "Preis-, Steuer- und Gutscheinangaben stimmen in Produkt, Checkout und Beleg überein",
+        "Bestellbestätigung und Rechnung referenzieren denselben unveränderlichen Leistungsstand",
+        "Datenschutz beschreibt tatsächlich eingesetzte Anbieter und Datenflüsse",
+        "Ein dokumentierter Fachtest gibt Verkauf und Erstattungsprozess vor dem Start frei"
+      ],
+      "depends_on": [
+        "SHP-01",
+        "SHP-05",
+        "SHP-06",
+        "SHP-07",
+        "GOV-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R3",
+      "source": [
+        "F04"
+      ],
+      "test": "Testkauf mit vollständiger Retoure und Gutscheinanteil bis zum Korrekturbeleg durchspielen.",
+      "decision": "D16 D23 D24",
+      "github": {
+        "number": 87,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/87"
+      }
+    },
+    {
+      "id": "GOV-01",
+      "epic": "E11",
+      "title": "Einwilligungen, Drittinhalte und Datenschutzeinstellungen trennen",
+      "role": "Besucherin",
+      "benefit": "freiwillige Datenverarbeitung selbst zu steuern",
+      "criteria": [
+        "Notwendige Websitefunktionen sind von Videos, Karten, Social Feed und Newsletter getrennt",
+        "Optionale Zwecke sind standardmäßig abgelehnt",
+        "Kenntnisnahme eines Buchungshinweises wird nicht als pauschale Einwilligung behandelt",
+        "Einwilligung dokumentiert Zweck, Textversion, Auswahl und Zeitpunkt",
+        "Widerruf ist so leicht erreichbar wie Zustimmung",
+        "Neue optionale Zwecke werden nicht durch frühere pauschale Auswahl freigegeben"
+      ],
+      "depends_on": [
+        "BAS-02"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04",
+        "W05",
+        "T01"
+      ],
+      "test": "Neue Consentversion, blockiertes JavaScript und Ablehnen aller Zwecke bei fortgesetzter Buchung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 24,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/24"
+      }
+    },
+    {
+      "id": "GOV-02",
+      "epic": "E11",
+      "title": "Rechtstexte und Anbieterangaben kontrolliert übernehmen",
+      "role": "Vorstand",
+      "benefit": "mit inhaltlich geprüften und funktionsgerechten Angaben zu veröffentlichen",
+      "criteria": [
+        "Verein, Kontakt, Impressum und Datenschutz beginnen mit den dokumentierten Referenzinhalten",
+        "Rechtstexte besitzen Stand, Verantwortungsrolle und fachliche Freigabe",
+        "Neue Datenflüsse für Mitgliedschaft, Kontaktformular, Shop und Kommunikation ergänzen die Referenz",
+        "Bestehende Texte werden nicht als bereits ausreichende Freigabe neuer Funktionen ausgegeben",
+        "Fehlende Pflichtangaben oder Platzhalter blockieren den betroffenen Release",
+        "Datenschutzeinstellungen und Erklärung stimmen mit realen Netzwerkrequests überein"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "GOV-01"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04",
+        "W02",
+        "W03",
+        "W04",
+        "W05"
+      ],
+      "test": "Inhaltsprüfung mit fehlendem Anbieter, unbekanntem Zahlungsanbieter und veralteter Consentbeschreibung muss scheitern.",
+      "decision": "D03 D16 D23",
+      "github": {
+        "number": 59,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/59"
+      }
+    },
+    {
+      "id": "GOV-03",
+      "epic": "E11",
+      "title": "Datenaufbewahrung und automatische Bereinigung umsetzen",
+      "role": "Datenschutzverantwortung",
+      "benefit": "Daten nur so lange wie freigegeben zu speichern",
+      "criteria": [
+        "Referenzfristen für Buchungen sind als technische Ausgangsbasis dokumentiert und fachlich zu bestätigen",
+        "Abgelaufene unbestätigte Anfragen werden nach 24 Stunden gelöscht",
+        "Sensibles Sonstiges wird 30 Tage nach Angebotsende entfernt; übrige direkte Buchungsdaten nach 90 Tagen anonymisiert",
+        "Mitgliedschaft, Stunden und Belege besitzen eigene bestätigte Fristen",
+        "Bereinigung von Details, Audit und Statistik erfolgt konsistent und wiederholbar",
+        "Backups haben eigenen Lebenszyklus; Restore führt Retention vor weiterer Nutzung erneut aus"
+      ],
+      "depends_on": [
+        "BUC-02",
+        "BUC-07",
+        "BAS-04"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01",
+        "W05"
+      ],
+      "test": "Grenzzeitpunkte, Jobabbruch nach Teilschritt, wiederholter Lauf und Restore vorsehen; spätere Kurse dürfen nicht mitgelöscht werden.",
+      "decision": "D25",
+      "github": {
+        "number": 88,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/88"
+      }
+    },
+    {
+      "id": "GOV-04",
+      "epic": "E11",
+      "title": "Auskunft, Berichtigung, Widerruf und Löschung bearbeiten",
+      "role": "betroffene Person",
+      "benefit": "die eigenen Daten nachvollziehbar verwalten zu lassen",
+      "criteria": [
+        "Anfrage wird nach geeignetem Identitätsnachweis der richtigen Person zugeordnet",
+        "Auskunft erfasst alle freigegebenen fachlichen Bereiche ohne fremde Familiendaten",
+        "Berichtigung verändert keine bereits ausgestellten Belege stillschweigend",
+        "Widerruf optionaler Gesundheitsangaben leert das Feld ohne automatische Kursstornierung",
+        "Löschung berücksichtigt getrennte gesetzlich oder fachlich bestätigte Aufbewahrungspflichten",
+        "Erledigung und eingeschränkte Ausnahmen werden ohne sensible Inhaltskopien dokumentiert"
+      ],
+      "depends_on": [
+        "GOV-03",
+        "MIT-06"
+      ],
+      "points": 8,
+      "priority": "P1",
+      "release": "R2",
+      "source": [
+        "F02",
+        "F04",
+        "W05"
+      ],
+      "test": "Person mit Gastbuchung und Mitgliedskonto, verwechslungsfähiger Name und zurückgenommene Familienfreigabe prüfen.",
+      "decision": "D25",
+      "github": {
+        "number": 89,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/89"
+      }
+    },
+    {
+      "id": "GOV-05",
+      "epic": "E11",
+      "title": "Berechtigungen, Verschlüsselung und Missbrauchsschutz prüfen",
+      "role": "Betrieb",
+      "benefit": "persönliche Daten und kritische Aktionen zu schützen",
+      "criteria": [
+        "Buchungs- und sensible Kontaktdaten verwenden freigegebene Active-Record-Verschlüsselung",
+        "Fehlende produktive Schlüssel verhindern den Anwendungsstart",
+        "CSRF-, Origin-, Session- und Rate-Limit-Prüfungen sichern schreibende Aktionen",
+        "Tokenwerte und sensible Freitexte sind in Rails-, Proxy- und Fehlerlogs maskiert",
+        "Rollen werden auf Listen-, Detail-, Schreib-, Datei- und Exportebene geprüft",
+        "Abhängigkeitsscan und gezielte Negativtests sind vor jedem Release erfolgreich"
+      ],
+      "depends_on": [
+        "BAS-03",
+        "BAS-04",
+        "BUC-02"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01"
+      ],
+      "test": "IDOR, CSRF, Login-Bruteforce, fehlender Cache, entzogene Rechte und Rohdownload außerhalb der Sitzung prüfen.",
+      "decision": "",
+      "github": {
+        "number": 90,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/90"
+      }
+    },
+    {
+      "id": "GOV-06",
+      "epic": "E11",
+      "title": "Barrierefreiheit, Ladezeit und Browserqualität abnehmen",
+      "role": "Besucherin",
+      "benefit": "die Website mit unterschiedlichen Geräten und Hilfsmitteln zuverlässig zu nutzen",
+      "criteria": [
+        "WCAG 2.2 AA ist als Qualitätsziel für Navigation, Inhalte und Formulare dokumentiert",
+        "Kernabläufe sind vollständig mit Tastatur und verständlichen Fehlermeldungen nutzbar",
+        "Videos respektieren reduzierte Bewegung und besitzen nutzbaren statischen Ersatz",
+        "Repräsentative Seiten werden bei 375, 768 und 1440 Pixeln sowie 200 Prozent Zoom geprüft",
+        "Für öffentliche Einstiege gelten Planungsbudgets LCP höchstens 2,5 Sekunden und CLS höchstens 0,1 unter dokumentiertem Messprofil",
+        "Aktuelle Chromium-, Firefox- und WebKit-basierte Browser werden für kritische Abläufe geprüft",
+        "Eine erreichbare Erklärung zur Barrierefreiheit beschreibt den tatsächlich geprüften Stand, bekannte Einschränkungen und einen Rückmeldeweg"
+      ],
+      "depends_on": [
+        "BAS-06",
+        "WEB-01",
+        "BUC-02",
+        "CMS-04"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "F04",
+        "W01"
+      ],
+      "test": "Manuellen Screenreader-/Tastaturtest ergänzend zu automatischen Prüfungen und mobilem Kaltstart durchführen.",
+      "decision": "",
+      "github": {
+        "number": 91,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/91"
+      }
+    },
+    {
+      "id": "REL-01",
+      "epic": "E12",
+      "title": "Inhalte und Bestandsdaten kontrolliert migrieren",
+      "role": "Projektverantwortung",
+      "benefit": "den Wechsel ohne Datenverlust und falsche Inhalte vorzubereiten",
+      "criteria": [
+        "Übernahmematrix unterscheidet öffentliche Texte, Medien, Konten und personenbezogene Fachbestände",
+        "Nur freigegebene Inhalte und nachgewiesene Medienrechte werden übernommen",
+        "Echter Datenimport hat eigenes Mapping, Trockenlauf und fachliche Stichprobe",
+        "Historische Identitäts-Reset-Anweisungen werden nicht ungeprüft auf dieses neue Projekt angewandt",
+        "Redirectliste und konsistentes Datenbank-/Storage-Backup sind Teil des Umschaltplans",
+        "Rückfallkriterium, verantwortliche Person und Zeitraum der Schreibsperre sind vor Umschaltung festgelegt"
+      ],
+      "depends_on": [
+        "BAS-01",
+        "BAS-04",
+        "GOV-02",
+        "GOV-03"
+      ],
+      "points": 8,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01",
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05"
+      ],
+      "test": "Wiederholten Import, Sonderzeichen, fehlerhafte Verweise und Rückkehr auf Ausgangsstand proben.",
+      "decision": "D26",
+      "github": {
+        "number": 92,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/92"
+      }
+    },
+    {
+      "id": "REL-02",
+      "epic": "E12",
+      "title": "Betriebsüberwachung und Störungsabläufe vorbereiten",
+      "role": "Betrieb",
+      "benefit": "Ausfälle von Buchung, Mail und Hintergrundjobs rechtzeitig zu erkennen",
+      "criteria": [
+        "Healthchecks überwachen Web, Datenbanken, Queue und Scheduler getrennt",
+        "Ausbleibende Reservierungsbereinigung und Mailrückstand erzeugen handlungsfähige Meldung",
+        "SQLite-Schreibkonflikte, voller Datenträger und Backupfehler werden erkennbar",
+        "Alarme enthalten keine Teilnehmerdaten und keine Tokens",
+        "Runbook beschreibt Diagnose, sichere Wiederholung und Eskalationsverantwortung",
+        "RPO höchstens 24 Stunden und RTO höchstens 4 Stunden gelten als zu bestätigende Planungsziele"
+      ],
+      "depends_on": [
+        "BAS-04",
+        "BUC-04",
+        "GOV-03"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01"
+      ],
+      "test": "Queue stoppen, Datenträgergrenze und fehlgeschlagenes Backup in Staging simulieren; alarmierten Wiederanlauf prüfen.",
+      "decision": "D02",
+      "github": {
+        "number": 93,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/93"
+      }
+    },
+    {
+      "id": "REL-03",
+      "epic": "E12",
+      "title": "Benutzerhandbuch und rollenspezifische Schulung bereitstellen",
+      "role": "Verwaltung",
+      "benefit": "Buchungen und Vereinsbetrieb sicher bedienen zu können",
+      "criteria": [
+        "Handbuch deckt alle vorhandenen Verwaltungsrouten und Rollen ab",
+        "Jede neue Funktion aktualisiert Bedienablauf, Rechte, Validierungen und Datenschutz im selben Änderungssatz",
+        "Kursplanung, Check-in, Storno und Versandfehler haben konkrete Beispiele",
+        "R2 ergänzt Mitgliedschaft, Beiträge und Mitarbeiterzeiten; R3 ergänzt Shop und Erstattungen",
+        "Schulung verwendet ausschließlich synthetische Daten",
+        "Mindestens eine Person je verantwortlicher Rolle führt Kernfälle erfolgreich ohne Entwicklerhilfe durch"
+      ],
+      "depends_on": [
+        "BUC-08",
+        "BUC-09"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01",
+        "F04"
+      ],
+      "test": "Neue Verwaltungsperson führt Kursanlage, manuelle Buchung, Storno und Mailwiederholung anhand des Handbuchs durch.",
+      "decision": "",
+      "github": {
+        "number": 94,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/94"
+      }
+    },
+    {
+      "id": "REL-04",
+      "epic": "E12",
+      "title": "Releaseabnahme und agentischen Arbeitsablauf festlegen",
+      "role": "Projektverantwortung",
+      "benefit": "Stories überprüfbar bis zur fachlichen Abnahme zu führen",
+      "criteria": [
+        "Jede Umsetzung startet aus einer Story mit AKs, Abhängigkeiten und geklärten Blockern",
+        "Ein Branch beziehungsweise PR trägt Story-ID, Nachweis und aktualisierte Dokumentation",
+        "Todo, In Progress und Done unterscheiden Planung, Umsetzung und fachliche Abnahme",
+        "Tests, Sicherheits- und Inhaltsprüfungen sowie echte Konkurrenztests werden pro Risiko verlangt",
+        "Produktivstart benötigt benannte fachliche Abnahme und geprobten Rückfallplan",
+        "R2 und R3 wiederholen die Gates für ihre neuen Datenflüsse und Geschäftsprozesse"
+      ],
+      "depends_on": [
+        "REL-01",
+        "REL-02",
+        "REL-03",
+        "GOV-05",
+        "GOV-06"
+      ],
+      "points": 5,
+      "priority": "P0",
+      "release": "R1",
+      "source": [
+        "T01",
+        "F05"
+      ],
+      "test": "Abnahmeprotokoll für Eltern-Gastbuchung, Admin-Kursbetrieb und Coach-Check-in; spätere Releases ergänzen Mitgliedschaft und Testkauf.",
+      "decision": "",
+      "github": {
+        "number": 95,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/95"
+      }
+    },
+    {
+      "id": "EXT-01",
+      "epic": "E13",
+      "title": "Spenden und Fördermöglichkeiten anbieten",
+      "role": "unterstützende Person",
+      "benefit": "den Verein freiwillig finanziell zu fördern",
+      "criteria": [
+        "Einmalspende und Fördermitgliedschaft sind verständlich getrennt",
+        "Empfänger, Zweck und Zahlungsweg sind freigegeben",
+        "Zahlung nutzt einen gehosteten freigegebenen Anbieter oder dokumentierte Überweisung",
+        "Spendenbestätigung wird nur entsprechend tatsächlich bestätigter Berechtigung und Zahlung ausgestellt",
+        "Abbruch und doppelte Zahlungsrückmeldung erzeugen keine doppelte Spende",
+        "Buchhaltung und Datenschutz erfassen den Spendenprozess gesondert"
+      ],
+      "depends_on": [
+        "FIN-01",
+        "FIN-05",
+        "GOV-02"
+      ],
+      "points": 8,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Anbieter-Sandbox mit Zahlung, Abbruch und doppelt geliefertem Ereignis.",
+      "decision": "D27",
+      "github": {
+        "number": 96,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/96"
+      }
+    },
+    {
+      "id": "EXT-02",
+      "epic": "E13",
+      "title": "Installierbare Web-App und optionale Push-Mitteilungen prüfen",
+      "role": "Mitglied",
+      "benefit": "freiwillige Hinweise auf dem Mobilgerät zu erhalten",
+      "criteria": [
+        "Anwendungsmanifest und Installationshinweis funktionieren auf unterstützten Geräten",
+        "Push wird nur nach aktiver separater Zustimmung und verfügbarer Browserfunktion angeboten",
+        "Kategorien für Terminänderungen und freiwillige News sind getrennt wählbar",
+        "Sperrbildschirmtexte enthalten keine Kinder- oder sensiblen Teilnehmerdaten",
+        "Abmeldung und Gerätewechsel entziehen Push-Abonnements",
+        "Offlineansichten speichern keine privaten Teilnehmerlisten und erzeugen keine falsche Buchungszusage"
+      ],
+      "depends_on": [
+        "MIT-06",
+        "BUC-09",
+        "GOV-01"
+      ],
+      "points": 8,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Nicht unterstützter Browser, abgelaufene Subscription, Logout am geteilten Gerät und Offlinebuchung prüfen.",
+      "decision": "D28",
+      "github": {
+        "number": 97,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/97"
+      }
+    },
+    {
+      "id": "EXT-03",
+      "epic": "E13",
+      "title": "Bewertungen mit Moderation und Schutzregeln anbieten",
+      "role": "Teilnehmerin",
+      "benefit": "sachliches Feedback zu einem besuchten Angebot zu geben",
+      "criteria": [
+        "Bewertung ist auf nachgewiesene eigene Teilnahme begrenzt",
+        "Öffentlichkeit und interne Rückmeldung sind ausdrücklich getrennt",
+        "Veröffentlichung erfolgt moderiert ohne Kinder- oder Drittpersonendaten",
+        "Melde- und Löschweg ist direkt erreichbar",
+        "Mehrfache Bewertungen desselben Besuchs werden verhindert",
+        "Absage, Löschung und Moderationsentscheidung bleiben nachvollziehbar"
+      ],
+      "depends_on": [
+        "BUC-07",
+        "GOV-04"
+      ],
+      "points": 5,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Nichtteilnehmer, personenbezogener Freitext und abgelehnte Veröffentlichung prüfen.",
+      "decision": "D29",
+      "github": {
+        "number": 98,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/98"
+      }
+    },
+    {
+      "id": "EXT-04",
+      "epic": "E13",
+      "title": "Englische Sprachversion für öffentliche Kernabläufe anbieten",
+      "role": "englischsprachige Person",
+      "benefit": "Angebote und Buchung zu verstehen",
+      "criteria": [
+        "Deutsch bleibt Ausgangssprache mit echten Umlauten",
+        "Navigation, Angebotsdetails, Buchungsformular und Systemmails haben geprüfte englische Fassung",
+        "Übersetzungen sind einem fachlichen Inhaltsstand zugeordnet",
+        "Fehlende Übersetzung fällt sichtbar auf die freigegebene deutsche Fassung zurück",
+        "Datums-, Zeit- und Währungsformate bleiben für den Standort eindeutig",
+        "Sprachwechsel verliert weder ausgewähltes Angebot noch ungesendete Formulardaten"
+      ],
+      "depends_on": [
+        "CMS-01",
+        "BUC-04"
+      ],
+      "points": 8,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Unvollständig übersetztes Angebot, englische Fehlermeldung und Sprachwechsel im Formular prüfen.",
+      "decision": "",
+      "github": {
+        "number": 99,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/99"
+      }
+    },
+    {
+      "id": "EXT-05",
+      "epic": "E13",
+      "title": "WhatsApp als freiwilligen Kontaktweg verlinken",
+      "role": "Interessentin",
+      "benefit": "den Verein über einen bekannten optionalen Kanal zu erreichen",
+      "criteria": [
+        "Es wird ausschließlich eine bestätigte geschäftliche Kontaktadresse verwendet",
+        "Ein einfacher externer Link löst vor dem Klick keine Anbieterrequests aus",
+        "Hinweis benennt den externen Anbieter vor dem Wechsel",
+        "Alternative per E-Mail und Telefon bleibt gleichwertig erreichbar",
+        "Keine Teilnehmer- oder Kinderdaten werden automatisch in Linktexte übernommen",
+        "Automatisierter Versand und Gruppenaufnahme sind nicht Teil dieser Story"
+      ],
+      "depends_on": [
+        "WEB-05",
+        "GOV-02"
+      ],
+      "points": 3,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Seitenaufruf ohne Klick und Link auf Mobil/Desktop prüfen; keine automatische Kontaktübermittlung.",
+      "decision": "D04",
+      "github": {
+        "number": 100,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/100"
+      }
+    },
+    {
+      "id": "EXT-06",
+      "epic": "E13",
+      "title": "Mitglieder werben Mitglieder kontrolliert anbieten",
+      "role": "Mitglied",
+      "benefit": "eine beschlossene Empfehlungsvorteilsregel zu nutzen",
+      "criteria": [
+        "Vorstand legt Berechtigung, Vorteil, Zeitraum und Obergrenze fest",
+        "Empfehlungscode enthält keine offen lesbaren Mitgliedsdaten",
+        "Vorteil entsteht erst nach bestätigter berechtigter Neuaufnahme",
+        "Selbstempfehlung und mehrfache Gewährung für dieselbe Person sind gesperrt",
+        "Kündigung oder Ablehnung folgt einer dokumentierten Rücknahmeregel",
+        "Einladung übermittelt keine fremde Kontaktadresse ohne selbst ausgelösten Vorgang"
+      ],
+      "depends_on": [
+        "MIT-02",
+        "MIT-05"
+      ],
+      "points": 5,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Selbstwerbung, zwei werbende Personen und abgelehnten Mitgliedsantrag prüfen.",
+      "decision": "D30",
+      "github": {
+        "number": 101,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/101"
+      }
+    },
+    {
+      "id": "EXT-07",
+      "epic": "E13",
+      "title": "Skateparks in Stuttgart als Übersicht bereitstellen",
+      "role": "Skaterin",
+      "benefit": "passende Orte mit klaren Nutzungsinformationen zu finden",
+      "criteria": [
+        "Einträge enthalten bestätigten Namen, Ort und Art des Skateparks",
+        "Zugänglichkeit, Regeln und Quellen haben ein Prüfdatum",
+        "Karte ist optional und besitzt eine nutzbare Listenalternative",
+        "Stuttpark und Vereinsangebote bleiben in ihrer Verantwortung getrennt",
+        "Verein behauptet keine Betreiberzuständigkeit für fremde Orte",
+        "Fehlerhafte oder veraltete Angaben können gemeldet und redaktionell korrigiert werden"
+      ],
+      "depends_on": [
+        "WEB-05",
+        "CMS-01"
+      ],
+      "points": 5,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Geschlossener Park, verweigerte Kartenzustimmung und fehlende Standortdaten prüfen.",
+      "decision": "",
+      "github": {
+        "number": 102,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/102"
+      }
+    },
+    {
+      "id": "EXT-08",
+      "epic": "E13",
+      "title": "Wetterinformationen für Outdoor-Angebote anzeigen",
+      "role": "Teilnehmerin",
+      "benefit": "die Wetteraussichten am Trainingsort einschätzen zu können",
+      "criteria": [
+        "Nur tatsächlich als Outdoor markierte Angebote erhalten Wetterinformationen",
+        "Anbieter, Standortbezug, Aktualisierungszeit und Quelle sind sichtbar",
+        "Veraltete oder fehlende Daten werden nicht als aktuelle Vorhersage ausgegeben",
+        "API-Ausfall verhindert weder Angebotsansicht noch Buchung",
+        "Wetteranzeige löst keine automatische Absage oder Umbuchung aus",
+        "Verbindliche Entscheidung und Regenregelung bleiben direkt erreichbar"
+      ],
+      "depends_on": [
+        "ANG-01",
+        "BUC-09"
+      ],
+      "points": 5,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F02",
+        "F05"
+      ],
+      "test": "API-Timeout, alter Cache und verwechselter Trainingsort prüfen.",
+      "decision": "D31",
+      "github": {
+        "number": 103,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/103"
+      }
+    },
+    {
+      "id": "EXT-09",
+      "epic": "E13",
+      "title": "Anbindung einer externen Vereins-App spezifizieren",
+      "role": "Vereinskoordination",
+      "benefit": "Datenpflege zwischen Website und Vereins-App zu vermeiden",
+      "criteria": [
+        "Konkrete Ziel-App und ihr benötigter Nutzen werden vor Schnittstellenbau benannt",
+        "Führendes System und erlaubte Synchronisationsrichtung sind pro Datenart festgelegt",
+        "Zugriff nutzt minimale Berechtigungen und widerrufbare Zugangsmittel",
+        "Keine Teilnehmer- und Kinderdaten werden ohne begründeten Bedarf synchronisiert",
+        "Fehler, Wiederholungen und Dubletten sind im Schnittstellenvertrag geregelt",
+        "Ein isolierter Test mit synthetischen Daten belegt den vereinbarten Ablauf"
+      ],
+      "depends_on": [
+        "MIT-06",
+        "GOV-04"
+      ],
+      "points": 5,
+      "priority": "P2",
+      "release": "R4",
+      "source": [
+        "F05"
+      ],
+      "test": "Doppeltes Ereignis, widerrufenen Zugriff und abweichende Mitgliedschaftsstände im Vertragsbeispiel prüfen.",
+      "decision": "D28",
+      "github": {
+        "number": 104,
+        "url": "https://github.com/marcbey/the-step-agentic-workflow/issues/104"
+      }
+    }
+  ]
+}
