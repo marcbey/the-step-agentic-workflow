@@ -17,6 +17,7 @@ Die Planung umfasst **13 Epics**, **91 ausgearbeitete Stories**, **547 konkrete 
 7. [Qualität und Abnahme](docs/planung/07-qualitaet-und-abnahme.md)
 8. [Alle Stories nach Epic](docs/planung/08-backlog-index.md)
 9. [Umsetzungsübergabe nach Teilprojekten](docs/superpowers/plans/2026-10-22-the-step.md)
+10. [Verifikation des GitHub-Planungsstands](docs/planung/09-verifikation.md)
 
 ## Lieferfolge
 
